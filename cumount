@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mount_path=$1
+user=$2
+(test $mount_path) || mount_path='/work/'
+(test $user) || user=root
+mount_path=$(echo '/'$mount_path'/'|sed 's/\/\//\//g')
+
+echo "UMount $mount_path"
+while fuser -mv $mount_path;do echo "Press Ctrl-d";cat;done;
+if ! fuser -mv $mount_path;then
+	sudo -u $user umount $mount_path
+else
+	echo 'Can`t umount $mount_path'
+	echo 'Press Ctrl-d';cat
+fi

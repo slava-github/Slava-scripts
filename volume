@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+$| = 1;
+
+my $adata = `amixer sget Master`;
+my ($min, $max, $now) = $adata =~ m/Limits: Playback (\d+) - (\d+).+Playback (\d+)/s;
+print join(' ', $min, $max, $now)."\n";
+exit unless @ARGV;
+if ($ARGV[0] eq 'up' && $now<$max) {
+	$now += 2;
+	$now = $max if $now>$max;
+	`amixer sset Master $now`;
+}
+
+if ($ARGV[0] eq 'down' && $now>$min) {
+	$now -= 2;
+	$now = $min if $now<$min;
+	`amixer sset Master $now`;
+}

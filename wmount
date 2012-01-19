@@ -1,0 +1,49 @@
+#!/bin/bash
+#--- Init ---
+#WORK_PATH="/home/slava/work"
+WORK_PATH="/home/slava/"
+WSERVER=$(cat /home/slava/.work-server)
+MOUNT_POINTS="
+slava@$WSERVER: $WORK_PATH/statdev\n\
+"
+
+action=$1
+if [ ! $action ]; then
+	echo "USAGE: wmount <action> <file list>"
+fi
+
+flist=$2
+if [ ! $flist ]; then
+#	flist=`ls $WORK_PATH`
+	flist='statdev'
+fi
+#---------------
+
+
+function check_mount () {
+	old_path=`pwd`
+	cd $1
+	full_path=`pwd -P`
+	echo $full_path
+	grep -q $full_path /etc/mtab
+}
+
+for i in $flist ; do
+	path="$WORK_PATH/$i"
+	if [ $action = 'mount' ]; then
+		if ! (check_mount $path); then
+			data=`echo -e $MOUNT_POINTS|grep $path`
+			COMM="sshfs $data -o transform_symlinks,reconnect,cache_timeout=2"
+			$COMM
+		else 
+			echo "$path alredy mounted"
+		fi
+	elif [ $1 = 'umount' ]; then
+		if (check_mount $path); then
+			cumount $path
+		fi
+	else
+		echo "Unknown '$action' action"
+		exit 1
+	fi
+done

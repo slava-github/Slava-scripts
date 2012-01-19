@@ -1,0 +1,33 @@
+#!/bin/bash
+qual=$1
+curdir=$(pwd)".MP3"
+if [ -z $qual ]; then qual=4;fi;
+echo -n >error.log
+
+find -iname '*.mp3'|while read -r fname; do
+	dir=$(dirname "$fname")
+	mkdir -p "$curdir/$dir"
+	rfname="$curdir/$fname"
+	if ! [ -f "$rfname" ];then
+		tags=$(perl <<PERL
+			use MP3::Tag;
+			my @data = map{s/'/'\\\''/g; \$_} MP3::Tag->new("$fname")->autoinfo();
+			my (\$title, \$track, \$artist, \$album, \$comment, \$year, \$genre) = @data;
+			printf("--tt '%s' --ta '%s' --tl '%s' --ty '%s' --tn '%s' --tg '%s'\n", 
+			\$title, \$artist, \$album, \$year, \$track, \$genre);
+PERL
+		)
+		fname=$(echo "$fname"|sed "s/'/'\\\''/g")
+		qrfname=$(echo "$rfname"|sed "s/'/'\\\''/g")
+		cmd="lame --ignore-tag-errors --mp3input -q 2 -m j --vbr-new -V $qual -b 32 $tags '$fname' '$qrfname'"
+		echo "$cmd" |bash
+		if ! [ -f "$rfname" ];then echo "$cmd" >>error.log;fi;
+	fi
+done
+
+find -iname 'cover.*'|while read fname;do
+	dir=$(dirname "$fname")
+	mkdir -p "$curdir/$dir"
+	rfname="$curdir/$fname"
+	cp "$fname" "$rfname"
+done

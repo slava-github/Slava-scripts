@@ -1,0 +1,6 @@
+#!/bin/bash
+if amixer sget Master|grep 'Mono:'|grep -q '\[off\]'
+then cmd='on'
+else cmd='off'
+fi
+amixer -q sset Master $cmd 

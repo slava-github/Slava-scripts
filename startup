@@ -1,0 +1,10 @@
+#!/bin/bash
+FLAGNAME=/tmp/startup.flg
+if ! [ -f $FLAGNAME ]; then
+	echo "HI"
+	sudo /etc/init.d/networking restart
+	sudo /etc/init.d/powersaved restart
+	sudo modprobe -r ahci
+	/home/slava/opt/bin/sw_profile switch
+	touch $FLAGNAME
+fi

@@ -1,0 +1,70 @@
+#!/bin/bash
+FLAG_FILE=/tmp/lid-opened
+LOG_NAME=/home/slava/opt/log/lid-patch
+pid_file=/var/tmp/lid-button-path
+
+echo $(date)": $0 $1 $2 $3" >>$LOG_NAME
+
+if [ -z $1 ]; then
+	echo "exit" >>$LOG_NAME
+	exit
+elif [ $1 == 'global.suspend2ram' ] ; then
+	. ${0%/*}/helper_functions # `dirname $0`/helper_functions
+	touch $FLAG_FILE
+	$SCRIPT_RETURN $EV_ID 0 "$MYNAME finished"
+	EXIT 0
+
+elif [ $1 == 'button.lid.closed' ]; then
+	echo "close" >>$LOG_NAME
+	if [ -f $pid_file ] && [ -d /proc/$(cat $pid_file) ]; then kill $(cat $pid_file); fi 
+	
+	. ${0%/*}/helper_functions # `dirname $0`/helper_functions
+	
+	/usr/lib/powersave/on_ac_power &>/dev/null
+	ac_bat=$?
+	
+	if [ $ac_bat = 1 ]; then
+	        if [ ! -f /tmp/sleep_off ]; then 
+			touch $FLAG_FILE
+	                powersave -u
+	        else
+	                xautolock -locknow
+	        fi      
+	elif [ $ac_bat = 0 ]; then
+	        xautolock -locknow
+	else
+	        DEBUG "Could not figure out AC power state, suppose online. Probably a workstation or broken ACPI table." INFO
+	fi
+	
+	$SCRIPT_RETURN $EV_ID 0 "$MYNAME finished"
+	EXIT 0
+
+elif [ $1 == 'run' ]; then
+	if [ -f $pid_file ] && [ -d /proc/$(cat $pid_file) ]; then exit; fi 
+	echo $$ > $pid_file
+	echo 'Через 40 сек будет перход в спящий режим....'
+	echo $(date)" run sleep" >>$LOG_NAME
+	sleep 40
+	echo $(date)" run suspend" >>$LOG_NAME
+	powersave -u
+
+elif [ -f $FLAG_FILE ]; then
+	. ${0%/*}/helper_functions # `dirname $0`/helper_functions
+	echo $(date)" lid opened" >>$LOG_NAME
+
+	rm $FLAG_FILE
+	if pidof X >/dev/null; then
+		echo $(date)" term start term ldp" >>$LOG_NAME
+		(x-terminal-emulator --display=:0 -e /home/slava/opt/bin/lid-button-patch run) >>$LOG_NAME 2>&1 &
+		echo $(date)" term stop ldp" >>$LOG_NAME
+	else
+		echo $(date)" console start ldp" >>$LOG_NAME
+		lid-button-patch run &
+		echo $(date)" console stop ldp" >>$LOG_NAME
+	fi
+
+	$SCRIPT_RETURN $EV_ID 0 "$MYNAME finished"
+	EXIT 0
+else
+	echo "nothing " >>$LOG_NAME
+fi

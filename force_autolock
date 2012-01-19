@@ -1,0 +1,4 @@
+xautolock -locknow
+xautolock -enable
+sleep 1
+xautolock -locknow

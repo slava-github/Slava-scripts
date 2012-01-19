@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Засыпаю через 20 сек."
+sleep 20
+killall -s INT deluge
+killall -s QUIT uTorrent.exe
+#powersave -U
+powersave -u

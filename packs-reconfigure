@@ -1,0 +1,27 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+$|=1;
+use lib '/home/slava/opt/lib/perl5/';
+use Common;
+
+my $flag = ($ARGV[0] eq 'force')?'':'-u' ;
+
+my %fierst_packets = ("debconf"=>1);
+
+while(my ($key, $val) = each(%fierst_packets)){
+	cmd($key, $flag);
+}
+
+my $fh = Common::command('packs-list all');
+while (<$fh>) {
+	chomp;
+	cmd($_, $flag);
+}
+
+sub cmd {
+	my ($pkg_name, $flag) = @_;
+	print "---= $pkg_name =---\n";
+	system("sudo dpkg-reconfigure $flag ".$pkg_name);
+}

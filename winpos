@@ -1,0 +1,44 @@
+#!/usr/bin/perl -w
+
+use strict;
+$| = 1;
+
+my $confName = '/tmp/saveWin.slava';
+$confName = '-' if($ARGV[1]);
+unmaximaze();
+save() if ($ARGV[0] && $ARGV[0] eq 'save');
+restore() if ($ARGV[0] && $ARGV[0] eq 'restore');
+
+sub unmaximaze {
+	open(FH, 'wmctrl -lG|grep -v " -1 "|') or die $!;
+	while (<FH>) {
+		if(my @data = m/^(0x[0-9a-z]+)\s+[-0-9]+\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/){
+			`wmctrl -i -r $data[0] -b remove,maximized_vert,maximized_horz,fullscreen`;
+		}
+	}
+}
+
+sub save {
+	my @id;
+	open(FH, 'wmctrl -lG|grep -v " -1"|') or die $!;
+	open(SH, ">$confName") or die $!;
+	while (<FH>) {
+		if(my @data = m/^(0x[0-9a-z]+)\s+[-0-9]+\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/){
+			$data[1] -= 10; 
+			$data[2] -= 44; 
+			next if $data[1] < 1280;
+			print SH join("\t", @data)."\n";
+		}
+	}
+}
+
+sub restore {
+	return unless ($confName eq '-' || -f $confName);
+	open(SH, "<$confName") or die $!;
+	while (<SH>) {
+		chomp();
+		my @data = split("\t");
+		system sprintf("wmctrl -i -r %s -e 0,%s,%s,%s,%s\n", @data);
+	}
+
+}

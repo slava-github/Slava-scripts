@@ -1,0 +1,14 @@
+#!/bin/bash
+if  [ -z $1 ]; then 
+	echo "USAGE: $0 (all [full]) | (manual)"
+	exit;
+fi
+if [ $1 == 'all' ]; then
+	format="%p#"
+	if [ $2 ] && [ $2 == 'full' ]; then
+		format="%M $format %v#"
+	fi
+	aptitude -F "$format" search '~i'
+elif [ $1 == 'manual' ]; then
+	aptitude -F "%M %p#" search '~i'|grep -vE '^A'|sed -s 's/ //g'
+fi

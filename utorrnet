@@ -1,0 +1,33 @@
+#!/bin/bash
+path=/work/Linux/distrib/Torrent
+cd $path
+if [ -f $path/pid ];then
+	pid=$(cat $path/pid)
+	rm $path/pid
+	kill $pid
+	while ps -p $pid;do sleep 1;done;
+fi
+if [ "$1" == 'stop' ];then
+	exit;
+fi
+./utserver -pidfile $path/pid -daemon
+x-www-browser --new-window http://localhost:8080/gui/
+pid=$(cat $path/pid)
+d=$(date -d "+10 sec" +%Y%m%d%H%M%S)
+while [[ "$d" > "$(date +%Y%m%d%H%M%S)" ]] ;do
+	if [ "$(cat $path/pid)" == "$pid" ]; then 
+		if ! ps -p $pid >/dev/null;then 
+			echo restart
+			./utserver -pidfile $path/pid -daemon
+			pid=$(cat $path/pid)
+		fi
+	else
+		exit;
+	fi
+	d=$(date -d "+10 sec" +%Y%m%d%H%M%S)
+	echo -n "$d "
+	sleep 5
+	date +%Y%m%d%H%M%S
+done
+echo "kill $pid"
+kill $pid

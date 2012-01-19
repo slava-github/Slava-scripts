@@ -1,0 +1,2 @@
+#!/bin/bash
+arecord -f cd|lame -m j -q 2 --vbr-new -V 7 -b 32 - > rec-`date +%s`.mp3

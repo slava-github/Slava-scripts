@@ -1,0 +1,21 @@
+#!/bin/bash
+if [ $1 == 'incom' ];then
+	text='в сети'
+	icon=/usr/share/icons/gnome/24x24/status/weather-clear.png
+elif [ $1 == 'out' ];then
+	icon=/usr/share/icons/gnome/24x24/status/weather-clear-night.png
+	text='Не в сети'
+elif [ $1 == 'away' ];then
+	icon=/usr/share/icons/gnome/24x24/status/weather-few-clouds.png
+	text='Отошла'
+fi
+echo `date`" $$ $1" >>/home/slava/.local/log/katty_notif
+file=/tmp/katty_notif
+echo $$ > $file
+sleep 1;
+if ! [ -f $file ] || grep -qv $$ $file;then exit;fi
+while grep -q $$ $file;do
+c=60
+(while grep -q $$ $file && [ $c != 0 ];do sleep 1;let c--;echo -n '';done;)|zenity --notification --window-icon=$icon --listen --text="Катя $text" >/dev/null 2>&1 
+echo '.'
+done

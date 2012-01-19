@@ -1,0 +1,4 @@
+#!/bin/bash
+if [ -e /proc/acpi/video/GFX0/LCD/brightness ];then
+	echo $1 > /proc/acpi/video/GFX0/LCD/brightness
+fi

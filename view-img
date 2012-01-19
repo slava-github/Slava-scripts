@@ -1,0 +1,2 @@
+#!/bin/bash
+display -auto-orient -resize 950x950 "$1"

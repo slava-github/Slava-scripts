@@ -1,0 +1,2 @@
+#!/bin/bash
+vlc v4l2:///dev/video1 --input-slave=alsa://hw:1

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+smbpasswd -r good.yandex.ru

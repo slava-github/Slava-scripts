@@ -1,0 +1,5 @@
+#!/bin/bash
+quality=$3
+[ -n $quality ] || quality=5
+lame --mp3input -m j -q 2 --vbr-new -V $quality -b 32 --add-id3v2 "$1" "$2"
+# --resample 44.1
