@@ -1,4 +1,7 @@
 #!/bin/bash
+
+xrl=/tmp/xrandr.last
+
 function waitWM {
 	data=$1;
 #	while wmctrl -d|grep -vq "$data";do sleep 1;done;
@@ -15,7 +18,7 @@ function waitWM {
 }
 
 function saExit {
-	xrandr -q >/home/slava/.screenlayout/xrandr.last
+	xrandr -q >$xrl
 	exit
 }
 
@@ -25,11 +28,11 @@ set -e
 echo -en "\n\nStart "
 date
 set -o xtrace
-winpos save stdout >$FILE.tmp
-c=`cat /home/slava/.screenlayout/xrandr.last || true`
+c=`cat $xrl || true`
 n=`xrandr -q`
 if [ "$c" = "$n" ] && ( [ -z "$1" ] || [ "$1" != "force" ] );then exit;fi
 
+winpos save stdout >$FILE.tmp
 if ( [ -n "$2" ] && [ "$2" = "single" ] && (xrandr -q|grep -q 'LVDS1 connected') ) || ( (xrandr -q|grep -c ' connected'|grep -q 1) && (xrandr -q|grep -q 'LVDS1 connected') );then
 	test -e $FILE || mv $FILE.tmp $FILE
 	xrandr --output HDMI2 --off 
