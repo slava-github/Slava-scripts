@@ -1,9 +1,9 @@
 #!/bin/bash
-CMD=audtool2
-pidof audacious2 || exec audacious2 --play
+CMD=audtool
+pidof audacious || exec audacious --play
 
-if audtool2 current-song-filename|grep -qv '^http';then 
-	audtool2 playback-playpause;
+if $CMD current-song-filename|grep -qv '^http';then 
+	$CMD playback-playpause;
 	exit
 fi
 
