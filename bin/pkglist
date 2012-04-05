@@ -1,0 +1,2 @@
+#!/bin/bash
+aptitude -F "%M %p" search '~i'|grep -vE '^A'|sed -s 's/ //g'
