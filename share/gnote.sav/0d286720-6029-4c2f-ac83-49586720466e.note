@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Как максимизировать или минимизировать окно</title><text xml:space="preserve"><note-content version="0.1">Как максимизировать или минимизировать окно
-
-xprop -id 0x6200d90|grep _NET_WM_STATE|grep _NET_WM_STATE_MAXIMIZED_HORZ
-
-wmctl -i -r 0x6200ab9 -b add,maximized_vert,maximized_horz
-wmctl -i -r 0x6200ab9 -b remove,maximized_vert,maximized_horz</note-content>
-</text><last-change-date>2010-12-02T13:00:07.914133Z</last-change-date><last-metadata-change-date>2010-12-02T13:00:24.010989Z</last-metadata-change-date><create-date>2010-12-02T12:23:09.997406Z</create-date><cursor-position>239</cursor-position><width>696</width><height>134</height><x>573</x><y>0</y><tags><tag>system:notebook:Разное</tag></tags><open-on-startup>False</open-on-startup></note>
-

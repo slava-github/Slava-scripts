@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>backup</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">backup
-Примерный алгоритм расчета:
-1. из access-log выбираем все записи у которых (vhost=<link:url>www.yandex.ru</link:url> и страница / с любым набором параметров) или (referer=*<link:url>www.yandex.ru/</link:url> с любым набором параметров) [* - означает любой набор символов . - означает точку]
-2. объединяем данные в группы по yandexuid и сортируем по времени.
-3. Далее ищем пары хитов наиболее близких по времени и referer (второго хита) = vhost+request (первого хита). Каждый хит может составить пару только 1 раз.
-Надо обратить внимание на следующую ситуацию: было сделано &gt;2 хитов на морду а потом &gt;2 хитов где referer морды, пару должны составить только последний хит на морду и первый хит где referer морда, все остальные хиты в поиске больше не участвуют.</note-content>
-</text><last-change-date>2010-12-15T09:56:25.012874Z</last-change-date><last-metadata-change-date>2010-12-15T09:56:25.012874Z</last-metadata-change-date><create-date>2010-12-15T09:56:09.387787Z</create-date><cursor-position>0</cursor-position><width>450</width><height>360</height><x>646</x><y>399</y><open-on-startup>False</open-on-startup></note>
-
