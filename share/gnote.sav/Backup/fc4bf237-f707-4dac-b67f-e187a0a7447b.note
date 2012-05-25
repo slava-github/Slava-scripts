@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>То что должно войти в Пакет на интерфейс:</title><text xml:space="preserve"><note-content version="0.1">То что должно войти в Пакет на интерфейс:
+<list><list-item dir="ltr">Увеличение поля Standard_Redir: 23251
+</list-item><list-item dir="ltr">siemafore portal_uniq_month was decreased : 23249
+</list-item><list-item dir="ltr">Fix for flash graphs not working inside iframe: 23244
+</list-item><list-item dir="ltr">Set argument LongReadLen = 1GB in Statbox::DB : 23218
+</list-item><list-item dir="ltr">Number Workers by host was decreased : 23209
+</list-item><list-item dir="ltr">reports 3175, 3945 was ingnoring in monitor guaranted reports : 23252
+</list-item><list-item dir="ltr">dbName : 23254
+</list-item><list-item dir="ltr"/></list></note-content>
+</text><last-change-date>2010-04-28T11:43:48.825115Z</last-change-date><last-metadata-change-date>2010-04-28T11:43:48.825115Z</last-metadata-change-date><create-date>2010-04-28T10:30:03.489669Z</create-date><cursor-position>376</cursor-position><width>494</width><height>225</height><x>730</x><y>438</y><open-on-startup>False</open-on-startup></note>
+

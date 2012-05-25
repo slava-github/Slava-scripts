@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>flow_week</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">flow_week
+static_week
+ base_data_week
+
+
+
+Леша, мне кажется что таблицы
+flow_week,static_week
+В своей сумме будут занимать места даже больше, чем в 3 раза
+по сравнению с base_data_week
+А их генерация будет занимать достаточно малое время т.к. в base_data_week по моим прикидкам будет находится максимум 60 000 000 коротких записей.
+
+Может мы и сгенерим именно base_data_week и будем ее хранить достаточно долго (в первом приближении вечно)</note-content>
+</text><last-change-date>2011-09-06T10:38:03.875478Z</last-change-date><last-metadata-change-date>2011-09-06T10:38:03.875478Z</last-metadata-change-date><create-date>2011-09-06T10:31:19.487556Z</create-date><cursor-position>41</cursor-position><width>450</width><height>360</height><x>450</x><y>415</y><open-on-startup>False</open-on-startup></note>
+

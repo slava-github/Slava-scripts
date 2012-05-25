@@ -1,0 +1,24 @@
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+QToolBar#AutopanoQT_ToolBar::horizontal{
+    background-image: url(UI:toolbar_h_logo_apg_2.png);
+    background-repeat: none;
+    background-position: right;    
+}
+
+QToolBar#AutopanoQT_ToolBar::vertical{
+    background-image: url(UI:toolbar_v_logo_apg_2.png);
+    background-repeat: none;
+    background-position:  bottom;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+QProgressBar::chunk{
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 144, 255, 128), stop:1 rgba(30, 144, 255, 0));
+    border: 1px solid rgba(30, 144, 255 , 255);
+}

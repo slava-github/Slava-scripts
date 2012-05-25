@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-1533 и STATADHOC-1637</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STATADHOC-1533 и STATADHOC-1637
+
+<link:url>https://jira.yandex-team.ru/browse/STATADHOC-1533</link:url>
+<link:url>https://jira.yandex-team.ru/browse/STATADHOC-1637</link:url>
+
+Надо грепнуть оба лога md.ya.ru/ymm
+
+Еще при расчетах могли быть использованы разные metrica_OS.sql
+
+т.к. metrica_OS.sql автоматом не обновляется а я обновил их 2011/09/02 
+и теперь данные до 23.06.2011 считаются по одному словарю
+а данные после 23.06.2011 по другому</note-content>
+</text><last-change-date>2011-09-07T07:20:45.353079Z</last-change-date><last-metadata-change-date>2011-09-07T07:20:45.353079Z</last-metadata-change-date><create-date>2011-09-07T07:08:21.357248Z</create-date><cursor-position>401</cursor-position><width>450</width><height>360</height><x>512</x><y>636</y><open-on-startup>False</open-on-startup></note>
+

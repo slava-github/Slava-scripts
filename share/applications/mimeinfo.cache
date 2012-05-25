@@ -1,0 +1,16 @@
+[MIME Cache]
+application/rtf=wine-extension-rtf.desktop;
+application/x-chm=wine-extension-chm.desktop;
+application/x-mswrite=wine-extension-wri.desktop;
+application/x-wine-extension-hlp=wine-extension-hlp.desktop;
+application/x-wine-extension-ini=wine-extension-ini.desktop;
+application/x-wine-extension-msp=wine-extension-msp.desktop;
+application/xml=wine-extension-xml.desktop;
+audio/x-wav=play-usercreated.desktop;
+image/gif=wine-extension-gif.desktop;
+image/jpeg=wine-extension-jpe.desktop;wine-extension-jfif.desktop;xnview-usercreated-1.desktop;
+image/png=wine-extension-png.desktop;xnview-usercreated-1.desktop;
+image/tiff=xnview-usercreated.desktop;
+text/html=wine-extension-htm.desktop;
+text/plain=wine-extension-txt.desktop;
+text/x-uri=wine-extension-url.desktop;

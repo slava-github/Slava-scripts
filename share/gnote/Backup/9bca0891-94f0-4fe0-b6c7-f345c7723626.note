@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Today: Пятница, Ноябрь 18 2011</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Today: Пятница, Ноябрь 18 2011
+
+project = &quot;Задачи по разовым расчетам&quot; and (labels is EMPTY or labels not in ('slava', 'kender', 'alexkuk')) and createdDate &lt; now() - '4h'
+
+<size:huge>Tasks</size:huge>
+
+
+<size:huge>Appointments</size:huge>
+
+
+</note-content>
+</text><last-change-date>2011-11-18T06:30:13.366023Z</last-change-date><last-metadata-change-date>2011-11-18T06:30:13.366023Z</last-metadata-change-date><create-date>2011-11-17T20:20:27.550050Z</create-date><cursor-position>32</cursor-position><width>450</width><height>360</height><x>428</x><y>233</y><tags><tag>system:NoteOfTheDay</tag></tags><open-on-startup>False</open-on-startup></note>
+

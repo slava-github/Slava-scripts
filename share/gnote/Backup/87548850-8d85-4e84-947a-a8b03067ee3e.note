@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>**Как считаем**</title><text xml:space="preserve"><note-content version="0.1">**Как считаем**
+Период расчета: последняя неделя на момент выполнения расчета
+Группировать данные: По дням
+
+Расчет показов: blockstat-log оставляем записи в которых присутствует блок <link:url>/web/item/title</link:url>
+Формат записи таков, что после Имени блока идет \t(два символа)Количество параметров\tИмя Параметра=Значение\t...
+Для блока <link:url>/web/item/title</link:url> нас интересуют только параметры: full, inline_pre, main, post, pre со своими значениями
+Надо выбрать эти параметры отсортировать их по имени и собрать в строку формата: name=value, name=value...
+Далее произвести группировку по таким группам и посчитать кол-во хитов
+
+</note-content>
+</text><last-change-date>2011-08-18T09:56:33.456045Z</last-change-date><last-metadata-change-date>2011-08-18T09:56:33.456045Z</last-metadata-change-date><create-date>2011-08-18T09:56:10.598726Z</create-date><cursor-position>606</cursor-position><width>746</width><height>360</height><x>329</x><y>412</y><open-on-startup>False</open-on-startup></note>
+

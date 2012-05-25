@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Переходы в Хроме на Яндекс</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Переходы в Хроме на Яндекс
+
+Необходимо получить список пользователей и сколько они дней они переходили на Морду используя Браузер Chrome
+
+Интересует именно чистый браузер Chrome от Google
+т.е. в UserAgent должно содержать Chrome/ не должно быть слова Chromium так же не должен в конце содержать YE
+
+За неделю с 19 по 25 сентября
+
+Интересует 2 группы пользователей:
+1. переходили из поиска Google по запросам (регистр не важен): yandex.ru, yandex, яндекс, яндекс.ру 
+2. Прямые заходы - т.е. Referer пустой.
+
+Результат предоставить в виде 2 текстовых файлов
+первое поле yandexuid второе кол-во дней в которых был хотя бы один переход.
+
+
+**Как считать**
+
+Период: 19 по 25 сентября
+Детализация: суммарно за весь период
+
+access_log 
+оставляем только записи:
+1. vhost=<link:url>www.yandex.ru</link:url> 
+2. user_agent содержит Chrmoe/ и не содержит Chromium и не содержит YE в конце
+3. request=/
+4. (referer=- или referer=пустой или поле отсутствует) или referer=от хоста google\.[\w\.]{2,} страница search|ie|url|aclk и есть параметр q который равен yandex или yandex.ru или яндекс или яндекс.ру без учета регистра
+
+далее группируем данные по yandexuid и для каждого считаем в скольких днях он совершал хиты первого и второго типа
+В результате подготавливаем для каждого типа хитов свой файл со списком yandexuid и кол-вом дней.
+
+
+</note-content>
+</text><last-change-date>2011-10-07T07:53:46.220929Z</last-change-date><last-metadata-change-date>2011-10-07T07:53:46.220929Z</last-metadata-change-date><create-date>2011-10-06T13:31:37.891748Z</create-date><cursor-position>0</cursor-position><width>614</width><height>716</height><x>369</x><y>211</y><open-on-startup>False</open-on-startup></note>
+

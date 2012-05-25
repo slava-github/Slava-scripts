@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-2388</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STATADHOC-2388
+
+Надо посчитать посещаемость 404 страницы с разбивкой по проектам и детализацией до урла, так же надо 2 среза &quot;вбили url руками&quot; и &quot;перешли по ссылке&quot;
+
+**как считат**
+Лог: access-log
+Период: 2 последних полных недели
+Детализация: по дням
+
+берем access-log оставляем только те записи у которых status=404 далее 
+<list><list-item dir="ltr">пытаемся определить проекты по vhost и в page подставляем / , если проект не определен причисляем хит к проекту Морда (Yandex) и Портал (Portal)
+</list-item><list-item dir="ltr">помечаем хит на существование referer 
+</list-item><list-item dir="ltr">Из request отрезаем параметры (далее буду называть это page)</list-item></list>
+далее для каждого дня
+Группируем данные по Проекту, Пути (R\tхост\tpage) и считаем 6 показателей: Посетители без referer, Хиты без referer, Посетители c referer, Хиты c referer, Посетители всего, Хиты всего
+Надо произвести сложение по дереву, т.е. посчитать те же показатели для Пути = R\tхост и Пути = R
+
+((<link:url>http://wiki.yandex-team.ru/Statbox/adhoc/OpisanieSlovarejjIAlgoritmov#posledovatelnostdejjstvijjpopublikacii</link:url> Выполнить действия по публикации))
+-report_path Metrika/Adhoc/TraffPrefetchInChrome
+-report_title &quot;Доля Префетча в Chrome&quot;
+
+Результат будет иметь следующий вид для каждого проекта отдельно (Мультипроектный древовидный отчет):
+#|
+|| | 2011-10-17| | | | | | 2011-10-18||
+|| Путь| Посетители без referer|Хиты без referer|Посетители c referer|Хиты c referer|Посетители всего|Хиты всего| ...||
+|| |  Всего| | | | | | ||
+|| |  * <link:url>www.yandex.ru</link:url>| | | | | | ||
+|| |    */gergegerg/ergerg| | | | | | ||
+|#
+
+Перед публикацией надо произвести свертку по дереву написав следующую команду.
+
+fold -tree_size 1000 -amount_key hits_all -node_path_key node_path -tree_id_key projectid
+где 
+hits_all это название поля &quot;Хиты всего&quot;
+node_path это название поля &quot;Путь&quot;
+projectid это название поля &quot;Проект&quot;</note-content>
+</text><last-change-date>2011-10-27T09:04:39.876549Z</last-change-date><last-metadata-change-date>2011-10-27T09:04:39.876549Z</last-metadata-change-date><create-date>2011-10-26T11:32:07.688391Z</create-date><cursor-position>1776</cursor-position><width>1280</width><height>977</height><x>0</x><y>0</y><open-on-startup>False</open-on-startup></note>
+

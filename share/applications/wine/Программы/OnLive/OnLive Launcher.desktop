@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=OnLive Launcher
+Exec=env WINEPREFIX="/home/slava/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/slava/.wine/dosdevices/c:/users/Public/Главное\\ меню/Программы/OnLive/OnLive\\ Launcher.lnk
+Type=Application
+StartupNotify=true
+Path=/home/slava/.wine/dosdevices/c:/Program Files/OnLive
+Icon=4BE9_OnLive.0

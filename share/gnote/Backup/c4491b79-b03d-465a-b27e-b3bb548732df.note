@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Задача STATADHOC-978</title><text xml:space="preserve"><note-content version="0.1">Задача STATADHOC-978
+
+1. Написать скрипт а точнее набор скриптов, стартовый скрипт должен называться make по получению логов от mapreduce Поиска.
+Скрипт должен пораждать задачи на mapreduce каждая будет забирать 1 день, кол-во одновременно работающих задач не более 3, каждая обращается к своему проксисерверу.
+
+Подробное описание о формате общения с проксисервером
+<link:url>http://wiki.yandex-team.ru/JandeksPoisk/KachestvoPoiska/MapReduce/Proxy#chtenietablicy</link:url>
+
+Сервера: larix[00-09].yandex.ru:8081
+Имена таблиц: bigmir/logs/hits20110206.tar.gz
+пример url запроса:
+<link:url>http://larix00.yandex.ru:8081/table//table/bigmir%2Flogs%2Fhits20110310.tar.gz/?username=statbox</link:url>
+
+Обратить внимание на протокол выдачи данных.
+</note-content>
+</text><last-change-date>2011-03-11T10:54:05.208408Z</last-change-date><last-metadata-change-date>2011-03-11T10:54:05.208408Z</last-metadata-change-date><create-date>2011-03-09T10:14:30.262964Z</create-date><cursor-position>699</cursor-position><width>450</width><height>360</height><x>781</x><y>613</y><open-on-startup>False</open-on-startup></note>
+

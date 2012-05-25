@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Что надо сделать Антону</title><text xml:space="preserve"><note-content version="0.1">Что надо сделать Антону
+1. В описании <link:internal>mapreduce</link:internal> упомянуть о веб-интерфейсах серверов и для чего они нужны, что с ними можно делать.
+2. В описании mapreduce написать, что надо добавлять параметры к запуску задач, и объяснить их физический смысл.
+3. Исправить генерацию ssh-ключа на ssh-keygen
+4. Описать, что в .bashrc надо вставить строчку . <link:url>~/statbox/bashrc-devel</link:url> <link:url>~/statbox</link:url>, что бы запускались все скрипты и создались стандартные алиасы.
+4.1 Положить ключ пользователя statbox и конфиг в .ssh
+5. Обсудить и сделать стандартные алиасы для выполнения команд в mapreduce.
+6. Небольшое введение в stylegaide: 
+<list><list-item dir="ltr">Табуляции для отступов
+</list-item><list-item dir="ltr"><link:internal> #!/usr</link:internal>/bin/perl -w 
+</list-item><list-item dir="ltr"> use strict;
+</list-item><list-item dir="ltr">Имена переменных
+</list-item><list-item dir="ltr">пробелы в операторы while (&lt;&gt;) {
+</list-item><list-item dir="ltr">пробелы в операторе (a &gt; b &amp;&amp; b &lt; c)</list-item></list>
+</note-content>
+</text><last-change-date>2010-05-07T07:04:22.836771Z</last-change-date><last-metadata-change-date>2010-05-07T07:04:22.836771Z</last-metadata-change-date><create-date>2010-05-06T10:20:07.875983Z</create-date><cursor-position>24</cursor-position><width>450</width><height>360</height><x>1589</x><y>247</y><open-on-startup>False</open-on-startup></note>
+

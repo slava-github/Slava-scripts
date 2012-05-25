@@ -1,0 +1,30 @@
+
+[Added Associations]
+text/plain=gvim.desktop;
+application/octet-stream=userapp-gvim-H5T5NV.desktop;libreoffice-calc.desktop;
+application/x-shellscript=gvim.desktop;
+inode/symlink=userapp-gvim-A75NXV.desktop;
+application/xml=gvim.desktop;
+application/vnd.ms-excel=openoffice.org-calc.desktop;
+text/x-pascal=gvim.desktop;
+x-scheme-handler/http=exo-web-browser.desktop
+x-scheme-handler/https=exo-web-browser.desktop
+application/x-dia-diagram=evince.desktop;
+video/mp2t=vlc.desktop;
+x-scheme-handler/mailto=thunderbird.desktop;
+image/jpeg=userapp-display-5RG77V.desktop;userapp-view-img-HL7K8V.desktop;userapp-view-img-DGVM8V.desktop;userapp-view-img-2TA47V.desktop;geeqie-standard.desktop;userapp-geeqie-I729BW.desktop;
+x-scheme-handler/file=exo-file-manager.desktop
+x-scheme-handler/trash=exo-file-manager.desktop
+application/x-wine-extension-ini=mousepad.desktop;
+application/msword=libreoffice-startcenter.desktop;
+image/tiff=userapp-geeqie-GX85BW.desktop;userapp-geeqie-T5JSBW.desktop;
+
+[Default Applications]
+application/x-dia-diagram=evince.desktop
+application/octet-stream=libreoffice-calc.desktop
+video/mp2t=vlc.desktop
+x-scheme-handler/mailto=thunderbird.desktop
+image/jpeg=userapp-geeqie-I729BW.desktop
+application/x-wine-extension-ini=mousepad.desktop
+application/msword=libreoffice-startcenter.desktop
+image/tiff=userapp-geeqie-T5JSBW.desktop

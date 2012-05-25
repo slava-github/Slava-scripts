@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Data</title><text xml:space="preserve"><note-content version="0.1">Data
+perl -e 'use Statbox::Mapper::MyCookie;my %res;my $mc = Statbox::Mapper::MyCookie-&gt;new(input=&gt;&quot;my&quot;, output=&gt;{as_string =&gt; 'full_str'}); print $mc-&gt;map({&quot;my&quot; =&gt; &quot;YyMCAwUnAgABLAEBLQECLgEBAA==&quot;})-&gt;[0]-&gt;{full_str};'</note-content>
+</text><last-change-date>2011-02-01T12:59:51.952649Z</last-change-date><last-metadata-change-date>2011-02-01T12:59:51.952649Z</last-metadata-change-date><create-date>2011-02-01T12:59:44.271978Z</create-date><cursor-position>214</cursor-position><width>1075</width><height>273</height><x>1280</x><y>0</y><open-on-startup>False</open-on-startup></note>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<project>
+	<task id="0@1" status="Active" tags="@важно" uuid="c4c729ff-959a-4576-b699-c733ecb33142">
+		<title>
+			Первая важная задача
+		</title>
+		<modified>
+			2011-08-10T13:50:08
+		</modified>
+		<content>
+			&lt;tag&gt;@важно&lt;/tag&gt;
+
+Эта задача очень важна
+
+		</content>
+	</task>
+	<task id="1@1" status="Active" tags="@важно" uuid="7b71b670-db57-4ee4-96c7-dddd1fb443b6">
+		<title>
+			Вторая важная задача
+		</title>
+		<modified>
+			2011-08-10T13:50:08
+		</modified>
+		<content>
+			&lt;tag&gt;@важно&lt;/tag&gt;, 
+
+		</content>
+	</task>
+	<task id="2@1" status="Active" tags="" uuid="afa3cb6b-7be4-4fa6-93ca-b112f82692d0">
+		<title>
+			Не важная задача
+		</title>
+		<modified>
+			2011-08-10T13:49:29
+		</modified>
+	</task>
+</project>

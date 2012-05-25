@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-2338</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STATADHOC-2338
+
+как считать
+
+Лог: mobile-access-log
+Период: 17.10.11 - 23.10.11
+Детализация: по дням
+Словари: m_platforms_group_names
+
+За основу можно взять код из задачи: 
+svn.yandex.ru/statbox/trunk/etc-class/Action-MapReduceJob/jobs/statadhoc/1231
+
+Поправить надо следующее:
+1. В код добавить фильтр lang в поле request должен начинаться на tr-
+
+Результат опубликовать:
+-report_path Mobile_Soft_Maps/Adhoc/TrUsersGroupsPlatforms
+-report_title &quot;Пользователи МЯП в Турции по платформам&quot;</note-content>
+</text><last-change-date>2011-10-24T15:25:11.782131Z</last-change-date><last-metadata-change-date>2011-10-24T15:25:11.782131Z</last-metadata-change-date><create-date>2011-10-04T11:33:29.145656Z</create-date><cursor-position>16</cursor-position><width>580</width><height>559</height><x>666</x><y>24</y><open-on-startup>False</open-on-startup></note>
+

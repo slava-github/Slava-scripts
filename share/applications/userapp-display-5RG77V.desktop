@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=display %f
+Name=display
+Comment=Custom definition for display
+NoDisplay=true

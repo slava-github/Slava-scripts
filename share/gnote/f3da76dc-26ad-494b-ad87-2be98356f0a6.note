@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Что надо подготовить для новых сотрудников:</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Что надо подготовить для новых сотрудников:
+1. Документация про VPN с файлами
+2. Сократил Азбуку (Надо еще подредактировать)
+3. Дополнение для vim положил на <link:url>http://dev01f.out.yandex.net/data/vim-statbox-tools.tar.bz2</link:url> и snipmate.tar.gz - Не работает Ctrl-] похоже не хватает какого-то пакета.
+4. bashrc-devel положил в <link:url>/usr/lib/statbox</link:url> - Надо придумать что-то с пакетом.
+5. Документы лучше сохранять в FireFox
+6. Букварь: <link:url>http://dev01f.out.yandex.net/MapReduce/</link:url> - надо изменить пункты, работы с географией (filedict)
+
+
+Стадии развития:
+Анна Шустрова, Александер Пантюхов - прочитали Букварь по MapReduce
+Константин Лиференко - Дошол до Букваря по MapReduce, т.к. ушел чуть раньше предыдущих.
+Роман Колобов - застрял на настройки vpn, т.к. были проблемы с конектом а во вторник его не было</note-content>
+</text><last-change-date>2011-09-28T07:18:05.011312Z</last-change-date><last-metadata-change-date>2011-09-28T07:18:05.011312Z</last-metadata-change-date><create-date>2011-09-26T11:02:06.574644Z</create-date><cursor-position>788</cursor-position><width>450</width><height>587</height><x>308</x><y>116</y><open-on-startup>False</open-on-startup></note>
+

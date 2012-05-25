@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>efwf</title><text xml:space="preserve"><note-content version="0.1">efwf
+
+Перспектива и масштаб
+Я пробовал использовать режим перспективы, и возникли следующие предложения и замечания.
+В данном виде масштабная линейка абсолютно ни с чем не соотносится, что мы видим не экране. 
+Может сделать, что бы масштаб внизу экрана соответствовал выбранному, а к верху уменьшался.
+И еще указатель местоположения я бы опустил ниже, т.к. при движении не сильно интересно наблюдать за тем, что уже проехал.
+
+У Google перспектива выглядит красивее и удобнее.
+
+</note-content>
+</text><last-change-date>2011-04-26T06:50:46.988519Z</last-change-date><last-metadata-change-date>2011-04-26T06:50:46.988519Z</last-metadata-change-date><create-date>2011-04-25T13:21:43.616347Z</create-date><cursor-position>6</cursor-position><width>450</width><height>360</height><x>533</x><y>483</y><open-on-startup>False</open-on-startup></note>
+

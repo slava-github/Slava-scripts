@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=geeqie -t %f
+Name=geeqie
+Comment=Custom definition for geeqie
+NoDisplay=true

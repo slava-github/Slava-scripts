@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-1115</title><text xml:space="preserve"><note-content version="0.1">STATADHOC-1115
+
+ - Считаем Москва и Россия без Москвы.
+ - Наличие у пользователя Бара определяется наличием подстроки YB/[\d\.]+ в строке UserAgent
+ - Показы считаем по blockstat-log где vhost=<link:url>www.yandex</link:url>*
+ - Клики считаем по redir-log dtype=clck, Путь блока это поле lid, а что бы посчитать пользователей с баром или без надо клики связать с показами по полю sid (в показах show_id), т.к. в клики не пишется UserAgent.</note-content>
+</text><last-change-date>2011-04-01T07:31:04.945827Z</last-change-date><last-metadata-change-date>2011-04-01T07:31:04.945827Z</last-metadata-change-date><create-date>2011-04-01T07:06:36.273348Z</create-date><cursor-position>147</cursor-position><width>450</width><height>360</height><x>599</x><y>392</y><open-on-startup>False</open-on-startup></note>
+

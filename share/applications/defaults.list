@@ -1,0 +1,14 @@
+[Default Applications]
+text/csv=openoffice.org-calc.desktop
+x-directory/normal=Thunar.desktop
+text/html=chromium-browser.desktop
+application/xml=chromium-browser.desktop
+audio/mpeg=vlc.desktop
+inode/directory=Thunar.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=openoffice.org-calc.desktop
+x-directory/gnome-default-handler=Thunar.desktop
+application/xhtml+xml=chromium-browser.desktop
+application/vnd.ms-excel=openoffice.org-calc.desktop
+text/plain=openoffice.org-calc.desktop
+audio/x-scpls=vlc.desktop
+application/x-perl=gvim.desktop

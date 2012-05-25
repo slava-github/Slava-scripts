@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Для того, что бы реализовать отчет описанный в таске STAT-4606 на регулярной основе, надо создать разовый расчет.</title><text xml:space="preserve"><note-content version="0.1">Для того, что бы реализовать отчет описанный в таске STAT-4606 на регулярной основе, надо создать разовый расчет.
+
+Для расчета Установок надо 
+ - взять данные из access_log-ов для проекта Soft_Update (с помощью стандартного определения проекта)
+Валидными считаются данные с тапом запроса HEAD и статусом ответа сервера: 200, 206, 304, а также page=/status.xml
+(это заключение я сделал на основании экшена: fetch_mdata_soft_export_access_log_from_archive.yaml)
+ - Из параметров выделить uid и разобрать его по следующему алгоритму:
+
+ &lt;[if (substr($ui, 0, 1) eq &quot;{&quot;
+        &amp;&amp; substr($ui, -1) eq '}')
+    {
+        $rec-&gt;{guid} = substr($ui, 1, -1);
+    } elsif (length($ui) == 36
+        &amp;&amp; $ui =~ /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
+    {
+        $rec-&gt;{guid} = $ui;
+    } else {
+        return;
+    }]&gt;
+В результате в промежуточную таблицу надо сохранить следующие данные:
+Ключ записи= guid
+Данные: clid, vnd-params, дата хита
+
+Пример записи в access-log:
+
+&lt;[Пример:
+[21/Jun/2010:09:55:22 +0400] soft.export.yandex.ru 95.158.255.31 &quot;GET /status.xml?yasoft=barie&amp;clid=141200&amp;ui={6DFAFA8D-40AF-4C6D-BE1D-3531001527E5}&amp;ver=4.3.0.1011&amp;os=winnt&amp;vnd-params=Dic250&amp;stat=dayuse HTTP/1.1&quot; 200 &quot;-&quot; &quot;Microsoft BITS/6.7&quot; &quot;-&quot; 29]&gt;
+
+- У нас в базе rawdata_ctl есть таблица soft_guid в ней храниться информация о том когда какой софт первый и последний раз обращались к серверу soft.export.yandex.ru, поэтому следующим этапом надо, залить эту таблицу в mapreduce в формате:
+Ключ записи= guid
+Данные: clid, дата первого появления, дата последнего появления.
+
+<list><list-item dir="ltr">Далее делаем merge по clid, а в качестве даты первого появления используем минимальную дату (из словаря или хита), а в качестве даты последнего появления используем максимальную дату (из словаря или хита), так же надо к clid-у присоединять vnd-params, для того что бы для мерджа следующих дней в качестве ключа использовать именно эту пару.
+</list-item><list-item dir="ltr">далее для расчета конечного результата, выбираем данные за определенный день по полю &quot;дата первого появления&quot; и считаем кол-во записей  всего, для каждого clid, и для каждой пары clid vnd-pamars.
+</list-item><list-item dir="ltr">Полученный результат представляем в виде:</list-item></list></note-content>
+</text><last-change-date>2010-12-06T14:24:24.495830Z</last-change-date><last-metadata-change-date>2010-12-06T14:24:24.495830Z</last-metadata-change-date><create-date>2010-12-02T15:23:07.443668Z</create-date><cursor-position>2111</cursor-position><width>450</width><height>728</height><x>567</x><y>233</y><open-on-startup>False</open-on-startup></note>
+

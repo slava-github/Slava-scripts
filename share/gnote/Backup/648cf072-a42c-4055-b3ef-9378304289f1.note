@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Надо посчитать кол-во переходов на загрузку Google-Хрома и Яндекс-Хрома</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Надо посчитать кол-во переходов на загрузку Google-Хрома и Яндекс-Хрома
+из Яндекс Поиска.
+В результатах надо учитывать как переходы с поисковой выдачи так и переходы с рекламмы
+
+Результат представить в виде 
+
+#|
+|| | 2011-10-04| ...||
+||google.*/chrome | ...| ...||
+||  * c рекламмы | ...| ...||
+||  * c естественной выдачи | ...| ...||
+||  * c колдунщика | ...| ...||
+||chrome.yandex.ru | ...| ...||
+||  * c рекламмы | ...| ...||
+||  * c естественной выдачи | ...| ...||
+||  * c колдунщика | ...| ...||
+|#
+
+**Как считать**
+1. Для расчета переходов &quot;c естественной выдачи&quot; и &quot;c колдунщика&quot;, берем redir_log dtype=iweb 
+url=<link:url>http://(www\.)?google\.[^/]+/chrome</link:url> или url=<link:url>http://(www\.)?\.chrome\.yandex</link:url>\.[^/]+
+к колдунщику относятся переходы у которых path=2\.&lt;дальше идет любой набор данных&gt; 
+все остальное это естественная выдача
+2. Для расчета переходов &quot;с рекламмы&quot; берем лог yabs-p2p-log бильтруем по ключу он должен содержать /RotateChEventLog. поле countertype=2 placeid=542
+оставляем те записи priorityid которых нашелся в приложенном файле 
+
+</note-content>
+</text><last-change-date>2011-10-06T11:53:04.550453Z</last-change-date><last-metadata-change-date>2011-10-06T11:53:04.550453Z</last-metadata-change-date><create-date>2011-10-05T15:19:38.089145Z</create-date><cursor-position>1045</cursor-position><width>450</width><height>360</height><x>632</x><y>438</y><open-on-startup>False</open-on-startup></note>
+

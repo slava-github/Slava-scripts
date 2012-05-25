@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>statadhoc-2817</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">statadhoc-2817
+
+1. Берем данные <link:url>https://stat.yandex-team.ru/-/CFHMQTzS</link:url> из таблицы данного отчета, проверяем что данные пришли за все дни считаем среднее
+
+2. Берем данные из того же отчета и считаем
+
+3. Тоже но делим на данные от мобильного портала.
+
+4. Берем сумму подневных аудиторий за месяц и берем данные из <link:url>https://stat.yandex-team.ru/-/CFHMBHom</link:url> отчета, делим.
+------------------------------
+
+5. </note-content>
+</text><last-change-date>2012-01-26T14:50:24.358137Z</last-change-date><last-metadata-change-date>2012-01-26T14:50:24.358137Z</last-metadata-change-date><create-date>2012-01-26T14:38:11.505793Z</create-date><cursor-position>401</cursor-position><width>450</width><height>360</height><x>819</x><y>170</y><open-on-startup>False</open-on-startup></note>
+

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Результат Q1</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Результат Q1
+
+Евгений Верещагин (evvers@) - 40% 
+  25% - Удержание KPI по &quot;Кодирование и исполнение задач разовых расчетов&quot;  <link:url>http://wiki.yandex-team.ru/planning/project/5020</link:url> 
+  15% - Подготовка стенда, для проведения удаленного собеседований <link:url>http://wiki.yandex-team.ru/planning/project/5267</link:url>
+             Молодец, тянет на себе обучение после увольнения Щербинина
+
+Василий Агапитов (kender@) - Если формально то 45% 
+  30% - Удержание KPI по «Технологии разовых расчетов»  <link:url>http://wiki.yandex-team.ru/planning/project/2863</link:url> 
+ 15% - Проведение эксперимента по разработке отчетов на Python <link:url>http://wiki.yandex-team.ru/planning/project/5242</link:url>
+
+Кукушкин Александр (alexkuk@) - 40% 
+  25% - Удержание KPI по «&quot;Технологии разовых расчетов»  <link:url>http://wiki.yandex-team.ru/planning/project/2863</link:url>
+  15% - Проведение эксперимента по разработке отчетов на Python <link:url>http://wiki.yandex-team.ru/planning/project/5242</link:url>
+
+Илья Струков (iley@) - 45% 
+  35% - Удержание KPI по &quot;Кодирование и исполнение задач разовых расчетов&quot;  <link:url>http://wiki.yandex-team.ru/planning/project/5020</link:url> 
+  10% - Система публикации оповещений для пользователей  <link:url>http://wiki.yandex-team.ru/planning/project/5270</link:url>
+
+Нечепуренко Вячеслав (slava@) - 45% 
+  25% -  Унификация среды разработки аутстафера
+  15% -  Подготовка стенда, для проведения удаленного собеседований <link:url>http://wiki.yandex-team.ru/planning/project/5267</link:url> 
+  5% - Автоматизация аудита ресурсов <link:url>http://wiki.yandex-team.ru/planning/project/2540</link:url> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Женя: 
+KPI +
+<list><list-item dir="ltr">Подготовка стенда для проведение собеседований.
+</list-item><list-item dir="ltr"> 50%</list-item></list>
+
+Вася: 45% KPI + Python
+Кукшкин: 45% KPI + Python
+
+Я :  Унификация среды работы outstaff
+JiraLite
+Аудит ресурсов
+Удаленные собеседования
+
+Q2:
+
+Женя
+1. Документация
+
+Вася:
+
+Саша Кукушкин:
+Вывод 2 сотрудников по решению 2 задач исключительно на Python
+
+2. Внедрение Python + Extractor
+4. Экспорт TNS + Comscore
+3. Эффективность кода
+
+
+5. Тесты на Perl + Python+ C++</note-content>
+</text><last-change-date>2012-04-13T11:37:13.234035Z</last-change-date><last-metadata-change-date>2012-04-13T11:37:13.234035Z</last-metadata-change-date><create-date>2012-04-03T11:05:56.263127Z</create-date><cursor-position>11</cursor-position><width>820</width><height>639</height><x>298</x><y>107</y><open-on-startup>False</open-on-startup></note>
+

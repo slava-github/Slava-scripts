@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STAT-5515</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STAT-5515
+
+Процесс расчета установок устроен следующим образом:
+<list><list-item dir="ltr">Каждый день мы на основании access логов soft-export выделяем новые uuid их с временем первого появления сохраняем в таблицу soft_guid в mapreduce
+</list-item><list-item dir="ltr">на основании таблицы soft_guid производится расчет отчета установок.</list-item></list>
+
+Из такой методике расчета следует, что при потере части данных из access лога или полного дня не очень критично, т.к. приложения будут засчитаны в последующие дни (когда они вновь обратятся к soft-export).
+Правда я провел анализ тех кто не появлялся в другие дни отличные от дня установки и получилось следующее:
+Расчет проводился 01.12.2011 в задаче STATADHOC-2644
+2011-11-09 - 32%
+2011-10-09 - 23%
+2011-10-05 - 21%
+2011-09-05 - 20%
+т.е. в течении месяца вы восполняем 70% потерь а в течении следующего еще 10%, а вот 20% мы теряем безвозвратно, но как мне кажется эти 20% нам не принесли ни какой прибыли.
+
+Теперь о восстановлении данных.
+Если проводить восстановление данных, то обязательно надо проводить пересчет отчета с даты которую восстанавливают до текущего момента, иначе часть установок будет учтено дважды.
+</note-content>
+</text><last-change-date>2011-12-02T09:30:02.830508Z</last-change-date><last-metadata-change-date>2011-12-02T09:30:02.830508Z</last-metadata-change-date><create-date>2011-12-02T08:05:03.368515Z</create-date><cursor-position>11</cursor-position><width>450</width><height>589</height><x>319</x><y>299</y><open-on-startup>False</open-on-startup></note>
+

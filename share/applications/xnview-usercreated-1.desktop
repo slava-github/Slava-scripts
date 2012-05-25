@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+NoDisplay=true
+Name=xnview
+Exec=/usr/bin/xnview
+MimeType=image/jpeg;image/png
+

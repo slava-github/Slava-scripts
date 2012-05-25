@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-2528</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STATADHOC-2528
+
+**Как считать**
+
+1. Надо взять ((<link:url>http://calendar.yandex.ru/export/holidays.xml?start_date=2010-01-01&amp;end_date=2013-01-01&amp;country_id=225&amp;for_yandex=1</link:url> словарь)) и положить его в statbox-dict/0000-00-00/holidays.yaml в следующем виде:
+%%
+---
+225:
+  2010-01-01:
+  2010-01-02:
+и т.д.
+%%
+Далее этот словарь в перле можно использовать:
+%%
+use YAML::XS;
+
+my $holidays = YAML::XS::LoadFile('holidays.yaml');
+
+%%
+
+
+Расчеты производим на основании таблицы statbox/jira-statadhoc-issues
+Выбрасываем задачи в labels содержащие 'базовая' без кавычек.
+Ее описание: <link:url>http://wiki.yandex-team.ru/StatBox/AdHoc/Logi/jira-statadhoc-issues</link:url>
+Из которого следует:
+1. Для расчета кол-ва созданных задач, выбираем все задачи у которых поле created находится в границах периода расчета
+
+Далее оперируем задачами у которых поле resolution_date находится в границах периода расчета
+2. Считаем общее число задач - это Решено, задач
+<list><list-item dir="ltr">Число задач у которых поле component=Пересчет - это Пересчёты
+</list-item><list-item dir="ltr">Число задач у которых resolution != Fixed - это Пересчёты Resolution ≠ Fixed</list-item></list>
+3. Оставляем задачи у которых  due_date &lt; resolution_date
+<list><list-item dir="ltr">Рассчитываем дельду между due_date и resolution_date
+</list-item><list-item dir="ltr">Рассчитываем кол-во нерабочего времени между resolution_date due_date, для этого надо использовать словарь holidays.yaml в котором указаны выходные дни и поля:</list-item></list>
+    s_resolved, s_closed, s_needinfo - начала не рабочих периодов 
+    e_resolved, e_closed, e_needinfo - окончания не рабочих периодов 
+ due date считается превышенным если resolution_date - due_date - нерабочее время = 0
+4. Доработать код задачи STATADHOC-2672 (комитить туда же) добавив сохранения информации о resrep из поля comment.string.to, это надо сделать следующим образом:
+<list><list-item dir="ltr">В map.pl добавить код по обработки ResRep, пример кода приложен в виде файла. 
+</list-item><list-item dir="ltr">Передавать эти данные в минутах в поле resrep=$rec{timestamp}@5:12:14:10 
+</list-item><list-item dir="ltr">если были проблемы с парсингом, то передавать в виде resrep=$rec{timestamp}@error
+</list-item><list-item dir="ltr"> В reduce.pl включить это поле в &quot;Поля в которых надо сохранять список всех уникальных значений&quot;
+</list-item><list-item dir="ltr">запустить пересчет с %%stbx-mrproc job -var date='{range 2011-09-01 2011-12-30} -var user=statbox'%%</list-item></list>
+5. Кол-во задач у которых resolution = Fixed и в поле resrep есть error - это Без ResRep
+6. Кол-во задач у которых resolution = Fixed и  component не содержит Пересчет - это Fixed без Пересчетов, задач
+7. Результаты опубликовать:
+ report_path: Statface/AdHoc/NumOfIssues
+ report_title: Количество issues
+Использовать приложенный конфиг из которого убрать &quot;Не приложены скрипты&quot; а добавить &quot;Fixed без Пересчетов&quot;</note-content>
+</text><last-change-date>2011-12-09T14:56:42.010769Z</last-change-date><last-metadata-change-date>2011-12-09T14:56:42.010769Z</last-metadata-change-date><create-date>2011-12-08T12:56:18.525713Z</create-date><cursor-position>2017</cursor-position><width>702</width><height>665</height><x>567</x><y>0</y><open-on-startup>False</open-on-startup></note>
+

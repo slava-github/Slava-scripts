@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-1040</title><text xml:space="preserve"><note-content version="0.1">STATADHOC-1040
+При написании скриптов соблюдать требования:
+<link:url>http://wiki.yandex-team.ru/Statbox/MapReduce/MrProc/TrebovanijaKReguljarizacii</link:url>
+
+1.Расчет производим в 2 этапа:
+<list><list-item dir="ltr">Пишем расчет посещаемости с разбивкой по проектам, т.е. к access-log применяем все фильтры, а проект определяем с помощью </list-item></list>
+$self-&gt;{_utg} = Statbox::UrlToGroups-&gt;new(Statbox::UrlToGroupsXMLGenerator-&gt;fsAbsPath('UrlToGroups.yaml'));
+$self-&gt;{_utg}-&gt;get($host, $page);
+Считаем Хиты, уникалов по yandexuid и по ip
+Результат должен максимально совпасть с отчетом:
+<link:url>https://stat.yandex-team.ru/Portal/Special/Summaries/Visits</link:url>
+<list><list-item dir="ltr">Добавить в фильтр &quot;Отставлять только те страницы в которых встречается параметр начинающийся на stpar
+</list-item><list-item dir="ltr">Далее каждый параметр в отдельности разбиваем следующим образом имя разбиваем по / и значение тоже разбиваем по / в результате получается некий путь в дереве, надо этот хит засчитать во всех узлах этого дерева. Если в урле несколько параметров stpar, то хит засчитывается для каждого парамтра в отдельности.</list-item></list>
+
+Результат представить в виде:
+date=YYYY-MM-DD node_path=&lt;путь в дереве начинающийся с R и разделенный символами \t &gt; hits= host= visitors=
+</note-content>
+</text><last-change-date>2011-04-05T14:34:24.698956Z</last-change-date><last-metadata-change-date>2011-04-05T14:34:24.698956Z</last-metadata-change-date><create-date>2011-04-05T11:09:31.116739Z</create-date><cursor-position>0</cursor-position><width>450</width><height>360</height><x>561</x><y>386</y><open-on-startup>False</open-on-startup></note>
+

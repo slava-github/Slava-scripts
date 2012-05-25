@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Заливка логов в mapreduce</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Заливка логов в mapreduce
+
+ssh statbox@space 'ls <link:url>/opt/storage2/maps/maps_mobile/*/lighttpd/access.log*'|grep</link:url> -E '201110(19|2[01234])'|awk '{print $0&quot;\t&quot;}'|mrp -write users/slava/log.list
+
+
+</note-content>
+</text><last-change-date>2011-10-25T07:33:10.697559Z</last-change-date><last-metadata-change-date>2011-10-25T07:33:10.697559Z</last-metadata-change-date><create-date>2011-10-25T07:21:39.942948Z</create-date><cursor-position>27</cursor-position><width>450</width><height>360</height><x>186</x><y>562</y><open-on-startup>False</open-on-startup></note>
+

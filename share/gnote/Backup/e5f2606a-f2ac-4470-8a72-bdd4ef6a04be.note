@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Пожелания для MrProc</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Пожелания для MrProc
+
+1. Вывод данных в файл.
+2. При запуске обрабатывать параметры как переменные (например что бы можно было выполнить для разного набора дат.)
+3. В Sort использовать временные таблицы как для src так и для dst одновременно.</note-content>
+</text><last-change-date>2011-01-17T09:37:58.058787Z</last-change-date><last-metadata-change-date>2011-08-30T12:40:02.096736Z</last-metadata-change-date><create-date>2011-01-17T09:17:31.203795Z</create-date><cursor-position>242</cursor-position><width>450</width><height>181</height><x>382</x><y>563</y><tags><tag>system:notebook:Работа</tag></tags><open-on-startup>False</open-on-startup></note>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>MapReduce</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">MapReduce
+mapreduce -server stbx-mrserver01t.yandex.ru:8013 -threadcount 16 -jobcount 704 
+-map ./test-map.pl -file test-map.pl -src access-log/2010-01-12 -dst username/test-map 
+
+-threadcount 8 -jobcount 960
+
+ Тестинг:
+	<link:url>http://stbx-mrserver01t.yandex.ru:13013/</link:url>
+ Продакшен:
+	<link:url>http://stbx-mrserver01e.yandex.ru:13013/</link:url>
+
+Новый:
+mrserver01e.stat.yandex.net:8013
+<link:url>http://mrserver01e.stat.yandex.net:13013/</link:url></note-content>
+</text><last-change-date>2012-02-01T10:33:42.851530Z</last-change-date><last-metadata-change-date>2012-02-01T10:33:42.851530Z</last-metadata-change-date><create-date>2010-02-18T11:48:39.702705Z</create-date><cursor-position>398</cursor-position><width>443</width><height>414</height><x>433</x><y>498</y><tags><tag>system:notebook:Работа</tag></tags><open-on-startup>False</open-on-startup></note>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Как завести нового Outstaff</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Как завести нового Outstaff
+
+1. На <link:url>https://newhire.yandex-team.ru</link:url> Создать краткую форму
+2. Добьавить сотрудника на staff путем нажатия на кнопку, обязательно указать email в домене yandex-team.ru.
+4. Заказать e-token через help или help-spb
+5. Написать письмо на dostup что бы разрешили VPN
+5. Написать письмо на statbox-admin + dostup что бы человека включили в outstaff макрос &lt;фирма&gt;
+6. Написать письмо на tools, что бы людей завели в <link:url>https://jiralite.yandex-team.ru</link:url>
+
+
+7. Создать пользователей на машине dev01f.out.yandex.net
+8. ssh-keygen
+9. cat .ssh/id_dsa.pub &gt;&gt;.ssh/authorized_keys
+10. Добавить публичный ключ в adm-mrjob/keydir
+11. Прописать пользователей в  adm-mrjob/gitosis.conf
+</note-content>
+</text><last-change-date>2012-04-03T06:55:10.371309Z</last-change-date><last-metadata-change-date>2012-04-03T06:55:10.371309Z</last-metadata-change-date><create-date>2012-03-15T09:45:04.298594Z</create-date><cursor-position>269</cursor-position><width>450</width><height>360</height><x>546</x><y>148</y><open-on-startup>False</open-on-startup></note>
+

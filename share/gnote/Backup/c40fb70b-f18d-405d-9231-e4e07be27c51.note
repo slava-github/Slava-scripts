@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-925</title><text xml:space="preserve"><note-content version="0.1">STATADHOC-925
+1. Установки баров - надо считать именно &quot;Портальная дистрибуция&quot; с детализацией как в отчете? Или только, что-то более детальное?
+2. Поиск из баров, мы определяем по определенному clid? Какому?
+
+Удаление баров: отчет 3349 (3348) - Вроде нормально считается в базе и сильно ее не напрягает.
+
+
+Аудитория баров: отчет 3334 (3296)
+(Отчет не должен жрать много ресурсов сейчас тормозит )
+
+vhost=soft.export.yandex.ru
+request=/status.xml*
+
+Используя словарь: <link:url>https://svn.yandex.ru/desktop/trunk/yasoft-list.txt</link:url>
+его описание: <link:url>http://wiki.yandex-team.ru/Statbox/adhoc/OpisanieSlovarejjIAlgoritmov#slovaryasoft</link:url>
+для поля yasoft получаем yasoft_path заменяем &quot;.&quot; на какой-то другой разделитель например &quot;;&quot; и генерим путь используя еще поля из лога:
+yasoft_path;ver;os
+Для этого пути производим расчет по дереву: Хиты, Посетители, Пользователи, Хосты
+Посетители - уникалы по куке yandexuid
+Пользователи - уникалы по полю ui причем оно разбирается как в Statbox::Mapper:AccessLog::P_Update_Generic
+Хосты - уникалы по IP
+
+При формировании результата используем тот же словарь, что бы сформировать русские названия.
+</note-content>
+</text><last-change-date>2011-03-16T12:56:12.210214Z</last-change-date><last-metadata-change-date>2011-03-16T12:56:12.210214Z</last-metadata-change-date><create-date>2011-03-15T13:06:54.611051Z</create-date><cursor-position>305</cursor-position><width>450</width><height>360</height><x>746</x><y>386</y><open-on-startup>False</open-on-startup></note>
+

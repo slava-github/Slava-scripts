@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Переливка данных между кластерами mapreduce</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Переливка данных между кластерами mapreduce
+
+<link:internal>mapreduce</link:internal> -server mrserver1e.mr.yandex.net:8013 -map 'mapreduce -server mrserver01e.stat.yandex.net:8013 -write slava/tmp/copy -append' -src statbox-dict/0000-00-00/InternalHosts.xml -dst slava/tmp/fake -jobcount 1</note-content>
+</text><last-change-date>2012-04-19T13:43:09.764448Z</last-change-date><last-metadata-change-date>2012-04-19T13:43:09.764448Z</last-metadata-change-date><create-date>2012-04-19T13:42:46.708991Z</create-date><cursor-position>45</cursor-position><width>450</width><height>360</height><x>1280</x><y>0</y><open-on-startup>False</open-on-startup></note>
+

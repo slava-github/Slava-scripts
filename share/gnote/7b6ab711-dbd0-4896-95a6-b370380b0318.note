@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Задача на сортировку</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Задача на сортировку
+
+<size:large>Eсть команда text-sort которая умеет сортировать данные  в лексикографическом порядке по возрастанию
+
+Дан  файл со списком стран и кол-вом населения в них
+Формат файла:
+&lt;Страна&gt;/t&lt;кол-во населения&gt;\n
+
+Надо  подготовить данные для команды text-sort,  что бы с ее помощью получить список стран по возрастанию населения.
+</size:large></note-content>
+</text><last-change-date>2012-02-28T13:35:47.182737Z</last-change-date><last-metadata-change-date>2012-02-28T13:35:47.182737Z</last-metadata-change-date><create-date>2012-02-28T05:24:20.788076Z</create-date><cursor-position>340</cursor-position><width>1280</width><height>753</height><x>0</x><y>0</y><open-on-startup>False</open-on-startup></note>
+

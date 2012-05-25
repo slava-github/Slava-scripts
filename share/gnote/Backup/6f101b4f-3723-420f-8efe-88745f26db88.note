@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-2323</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STATADHOC-2323
+
+
+Исключать внутренние счетчики Яндекса?
+
+Лог: watch-log.6p
+Период: 2011-03-01 - максимально возможный
+Детализация: по дням
+Библиотеки: SearchEngine.pm
+Словари: metrica_SearchEngines_Patterns.sql и metrica_SearchEngines.sql (есть на кластере)
+
+Оставляем только те записи в которых в
+user_agent встречается слово Chrome
+__не__ удовлетворяют следующей регулярке m/\turl=https?:\/\/([^\/\t]+\.)?(yandex|ya|moikug)\.(com\.)?\w{2,3}\// (вроде я ее проверил)
+для поля referer определилась поисковая система с помощью модуля SearchEngine.pm
+Поисковики отличные от Google  и Яндекс обозначаем как &quot;Все остальные поисковики&quot;
+Поисковик Google дополительно делим на 2 группы
+если в поле browser-info есть ex:pre1 - это Google с пререндером
+иначе - Google без пререндера
+Группируем по поисковикам и для каждого считаем кол-во хитов.
+в результате должен получится отчет:
+
+#|
+||Поисковик|2011-03-01|2011-03-02||
+||| |Хиты|Хиты||
+||Google без пререндера| | ||
+||Google с пререндера| | ||
+||Все остальные поисковики| | ||
+|#
+
+((<link:url>http://wiki.yandex-team.ru/Statbox/adhoc/OpisanieSlovarejjIAlgoritmov#posledovatelnostdejjstvijjpopublikacii</link:url> Выполнить действия по публикации))
+-report_path Metrika/Adhoc/TraffPrefetchInChrome
+-report_title &quot;Доля Префетча в Chrome&quot;
+</note-content>
+</text><last-change-date>2011-10-20T10:41:41.026524Z</last-change-date><last-metadata-change-date>2011-10-20T10:41:41.026524Z</last-metadata-change-date><create-date>2011-10-20T07:13:49.275789Z</create-date><cursor-position>1025</cursor-position><width>824</width><height>705</height><x>114</x><y>63</y><open-on-startup>False</open-on-startup></note>
+

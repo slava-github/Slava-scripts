@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Календарь в Thunderbird</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Календарь в Thunderbird
+Надо исправить файл:
+sudo sqlitebrowser <link:url>/usr/share/xul-ext/calendar-timezones/timezones.sqlite</link:url>
+
+update tz_data
+set component='BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+X-LIC-LOCATION:Europe/Moscow
+BEGIN:STANDARD
+TZOFFSETFROM:+0400
+TZOFFSETTO:+0400
+TZNAME:MSK
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+
+'
+where tzid='Europe/Moscow'
+;
+!!Последний перенос строки обязателен.!!</note-content>
+</text><last-change-date>2012-01-11T09:47:59.691656Z</last-change-date><last-metadata-change-date>2012-01-11T09:47:59.691656Z</last-metadata-change-date><create-date>2011-11-10T15:21:40.541749Z</create-date><cursor-position>356</cursor-position><width>450</width><height>360</height><x>1280</x><y>0</y><tags><tag>system:notebook:Разное</tag></tags><open-on-startup>False</open-on-startup></note>
+

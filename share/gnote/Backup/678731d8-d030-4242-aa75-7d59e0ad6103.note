@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Притензии к описаниям Кукшкина</title><text xml:space="preserve"><note-content version="0.1">Притензии к описаниям Кукшкина
+(подзадачи к 1638)
+
+1. Не делать цепочек зависимых задач (в большинстве случаев это не оправданно)
+2.  &quot;группируем записи по uid&quot; обязательно вызовет вопрос, что за uid надо писать либо по пользователям либо по куке yandexuid
+3. &quot;request принадлежит проекту rabota.yandex.ru&quot; - очень не понятно, надо писать (хит принадлежит проекту Rabota, или vhost=rabota.yandex.ru)
+4. Задача STATADHOC-1673 
+5. Когда создаешь подзадачу, надо в репортеры писать заказчика.
+6. </note-content>
+</text><last-change-date>2011-08-05T07:59:07.637552Z</last-change-date><last-metadata-change-date>2011-08-05T07:59:07.637552Z</last-metadata-change-date><create-date>2011-08-04T09:06:05.101253Z</create-date><cursor-position>493</cursor-position><width>450</width><height>360</height><x>137</x><y>330</y><open-on-startup>False</open-on-startup></note>
+

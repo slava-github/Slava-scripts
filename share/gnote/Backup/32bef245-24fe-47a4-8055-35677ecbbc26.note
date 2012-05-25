@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>statadhoc-649</title><text xml:space="preserve"><note-content version="0.1">statadhoc-649
+
+Надо посчитать сколько пользователей пришедших на
+
+Промо страницу:
+content.webmaster.yandex.ru (счетчик в метрике counter_id=1192322)
+<link:url>http://metrika.yandex.ru/stat/sources/tags/?ulogin=ya-metrika&amp;counter_id=1192322</link:url>
+
+Пока внутренние переходы никак не отсеиваются. Но на будущее договорились что это будет параметр в url - from=promo
+
+Доходят до Вебмастера (counter_id=723120 и установлен параметр в поле url - from=promo)
+<link:url>http://metrika.yandex.ru/stat/sources/tags/?ulogin=ya-metrika&amp;counter_id=723120</link:url>
+
+Доходят до чтения формы
+counter_id=723120
+url=<link:url>http://webmaster.yandex.ru/site/service-plugin.xml?host=3967629&amp;service=RABOTA&amp;ncrnd=6095</link:url>
+
+Нажимают кнопку Отправить.
+counter_id=723120
+url=goal://webmaster.yandex.ru/FORMRABOTA
+</note-content>
+</text><last-change-date>2011-01-13T12:39:54.268620Z</last-change-date><last-metadata-change-date>2011-01-13T12:39:54.268620Z</last-metadata-change-date><create-date>2011-01-13T09:05:53.855094Z</create-date><cursor-position>613</cursor-position><width>450</width><height>404</height><x>589</x><y>570</y><open-on-startup>False</open-on-startup></note>
+

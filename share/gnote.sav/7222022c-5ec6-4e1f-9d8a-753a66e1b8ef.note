@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Разное</title><text xml:space="preserve"><note-content version="0.1">Разное
+ - Список файлов:  find /etc -type f -printf '%TY/%Tm/%Td:%TH:%TM\t%p\n'|sort
+ - Mount ISO: sudo mount -o loop -t iso9660 AC11-INT.iso <link:url>/media/cdrom0/</link:url></note-content>
+</text><last-change-date>2010-02-18T11:50:46.204403Z</last-change-date><last-metadata-change-date>2010-02-25T07:06:51.759694Z</last-metadata-change-date><create-date>2010-02-18T11:50:33.875442Z</create-date><cursor-position>156</cursor-position><width>439</width><height>162</height><x>830</x><y>485</y><tags><tag>system:notebook:Разное</tag></tags><open-on-startup>False</open-on-startup></note>
+

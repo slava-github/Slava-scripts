@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-1971</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STATADHOC-1971
+
+**Как считать**
+Логи: watch_log
+Период расчета: 06.06.2011 - т.в.
+Детализация: Недели
+
+1. Выбираем все записи в которых в поле referer либо 
+Google.ru 
+^(?:<link:url>http://)?(?:www\.)?google\.ru/(?:(?:search|ie|url|aclk|#).*?(?&lt;=[\?;&amp;#])(?:\w+_)?q\=([^#&amp;]*)|webhp</link:url>|$)
+или Яндекс поиск 
+^(?:<link:url>http://)?yandex\.ru/yandsearch</link:url>
+заодно маркируем хиты.
+2. Для каждого yandexuid (именно кука ip не интересен) считаем кол-во хитов с Гугля (G) и кол-во хитов с Яндекса поисков (Y)
+Результат надо сохранить в табилцу circulation_users/base_data/YYYY-MM-DD
+формат таблицы с подключем: yandexuid\tYYYY-MM-DD\tY=&lt;число&gt;\tG=&lt;число&gt;
+где YYYY-MM-DD это дата начала периода
+
+3. Используем таблицу circulation_users/base_data/YYYY-MM-DD Для каждой уникальной пары Y и G надо посчитать, кол-во yandexuid
+Результат сохранить в таблицу: circulation_users/static_week/YYYY-MM-DD, где YYYY-MM-DD это дата начала периода
+формат без подключа: &lt;Y&gt;;&lt;G&gt;\t&lt;кол-во yandexuid&gt;
+
+4. Используем таблицу circulation_users/base_data/YYYY-MM-DD (t) и base_data за предыдущий период (t-1)склеиваем их по ключу (yandexuid). группируем по квартетам &lt;Yt&gt;;&lt;Gt&gt;;&lt;Yt-1&gt;;&lt;Gt-1&gt; и считаем кол-во уникальных yandexuid
+Результат сохраняем в таблицу circulation_users/flow-1/YYYY-MM-DD где YYYY-MM-DD это дата начала периода расчета
+формат без подключа: &lt;Yt&gt;;&lt;Gt&gt;;&lt;Yt-1&gt;;&lt;Gt-1&gt;\t&lt;кол-во yandexuid&gt;
+
+5. Тоже, что и пункт 4 но вторая таблица за 2 периода назад
+результат сохраняем в circulation_users/flow-2/YYYY-MM-DD
+
+Код оформить согласно ((<link:url>http://wiki.yandex-team.ru/Statbox/MapReduce/MrProc/TrebovanijaKReguljarizacii</link:url> требованиям на регуляризацию))</note-content>
+</text><last-change-date>2011-09-06T14:26:20.773706Z</last-change-date><last-metadata-change-date>2011-09-06T14:26:20.773706Z</last-metadata-change-date><create-date>2011-09-06T11:33:35.792595Z</create-date><cursor-position>1605</cursor-position><width>450</width><height>631</height><x>646</x><y>319</y><open-on-startup>False</open-on-startup></note>
+

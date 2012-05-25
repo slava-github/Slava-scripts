@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>На каком Инстансе базы.</title><text xml:space="preserve"><note-content version="0.1">На каком Инстансе базы.
+select INSTANCE_NAME,HOST_NAME from  v$instance</note-content>
+</text><last-change-date>2010-12-22T12:40:16.462962Z</last-change-date><last-metadata-change-date>2010-12-22T12:41:16.496946Z</last-metadata-change-date><create-date>2010-12-22T12:39:52.853332Z</create-date><cursor-position>24</cursor-position><width>372</width><height>149</height><x>2096</x><y>608</y><tags><tag>system:notebook:Работа</tag></tags><open-on-startup>False</open-on-startup></note>
+

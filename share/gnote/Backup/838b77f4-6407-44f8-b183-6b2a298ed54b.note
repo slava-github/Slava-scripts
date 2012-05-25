@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Вопросы к задаче STATADHOC-1960</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Вопросы к задаче STATADHOC-1960
+
+type=4 и room0=1 или room1=1 это type=4 и (room0=1 или room1=1) ?
+
+
+всегда задают параметр maxprice - это во всех хитах?</note-content>
+</text><last-change-date>2011-08-31T11:58:16.265492Z</last-change-date><last-metadata-change-date>2011-08-31T11:58:16.265492Z</last-metadata-change-date><create-date>2011-08-31T11:56:21.251546Z</create-date><cursor-position>132</cursor-position><width>450</width><height>360</height><x>257</x><y>264</y><open-on-startup>False</open-on-startup></note>
+

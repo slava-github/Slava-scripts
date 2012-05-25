@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Словарь jira-statadhoc-issues</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Словарь jira-statadhoc-issues
+В key лежит идетификатор задачи
+в subkey время последнего обновления записи
+
+created - Время создания задачи
+appraiser - логин оценщика
+s_asses, e_asses - Время начала и конца оценки
+developer - логин разработчика на которого назначена задача
+assigned - Время когда назначена задача
+s_resolved - Времена, разделенные ; , перевода задачи в состояние resolve
+e_resolved - Времена, разделенные ; , возврата задачи из состояние resolve
+s_closed - Времена, разделенные ; , перевода задачи в состояние closed
+e_closed - Времена, разделенные ; , возврата задачи из состояние closed
+resolution - Вариант выполнения задачи
+resolution_date - Время в которое задача была выполнена
+labels - Список всех labels установленных в задаче
+component - Компонент установленный у задачи
+orig_estimate - Оценка задачи в секундах</note-content>
+</text><last-change-date>2011-12-07T14:16:20.076645Z</last-change-date><last-metadata-change-date>2011-12-07T14:16:20.076645Z</last-metadata-change-date><create-date>2011-12-07T09:46:27.287895Z</create-date><cursor-position>8</cursor-position><width>450</width><height>467</height><x>819</x><y>0</y><open-on-startup>False</open-on-startup></note>
+

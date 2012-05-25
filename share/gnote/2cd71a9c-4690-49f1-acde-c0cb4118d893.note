@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>VIM</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">VIM
+ % - Перейти на парный символ
+  * - Поиск слова под курсором
+ '' - перейти на предыдущее место
+ Ctrl+O - на предыдущее место
+ Ctrl+I - обратно
+F3 - Открыть закрыть список методов
+\сс - Установка комментариев
+
+folding: z
+  o - open
+  c - close
+  m - close all
+  r - open all
+
+Метки:
+  m{буква метки}
+  '{буква метки}
+  '[ - на начало последнего изменения
+  '] - на конец последнего изменения
+
+Окно:
+^W {стрелки} - переключение между окнами
+
+Смена кодировки:
+:e ++enc=имя-кодировки # Перечитывает фай меняя кодировку
+
+%:p:h - директория открытого файла
+
+Для разбиение строки на несколько надо использовать символ \r</note-content>
+</text><last-change-date>2011-11-23T10:25:23.901578Z</last-change-date><last-metadata-change-date>2011-11-23T10:25:23.901578Z</last-metadata-change-date><create-date>2010-08-17T13:37:25.863512Z</create-date><cursor-position>285</cursor-position><width>346</width><height>620</height><x>923</x><y>0</y><tags><tag>system:notebook:Работа</tag></tags><open-on-startup>False</open-on-startup></note>
+

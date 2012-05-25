@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Переезд на IPV6</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Переезд на IPV6
+
+1. Парсинг (madmazoku) - 1 день.
+  Доработать валидатор, что бы воспринимал ipv6
+
+2. Переделать Statbox::Geobase
+<list><list-item dir="ltr">Должен принимать все представления ip
+</list-item><list-item dir="ltr">должен работать только с IPReg.yandex (в урезанном функционале)
+</list-item><list-item dir="ltr">Должен делать то, что делает Statbox::GeoRegion</list-item></list>
+3. Поставка IPV6-IPReg.detailed в mapreduce (????) - ? дней
+<list><list-item dir="ltr">преобразование в IPV6-statBase64 формат
+</list-item><list-item dir="ltr">упаковка в geobase.pm
+</list-item><list-item dir="ltr">поставка отдельно IPV6-IPReg.yandex</list-item></list>
+4. Проверить гарантированные отчеты.
+6. Перевести актуальный код на новую библиотеку
+</note-content>
+</text><last-change-date>2012-05-12T06:00:10.906381Z</last-change-date><last-metadata-change-date>2012-05-12T06:00:10.906381Z</last-metadata-change-date><create-date>2012-05-11T14:56:23.390823Z</create-date><cursor-position>17</cursor-position><width>450</width><height>360</height><x>703</x><y>569</y><open-on-startup>False</open-on-startup></note>
+

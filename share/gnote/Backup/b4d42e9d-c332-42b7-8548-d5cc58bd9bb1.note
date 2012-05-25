@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-1989</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">STATADHOC-1989
+
+**Как считать**
+
+Берем скрипты из задачи 1869
+
+Далее модифицируем код так, что бы дополнительно формировалась группа U_All -- все пользователи, появлявшиеся в логах не менее, чем в 3 разных днях за период.
+
+Далее реализуем пункт 2:
+
+2. Используя идентификаторы пользователей полученные в пункте 1, нужно выгрузить потоки запросов (к Я и Г вместе) для каждой группы отдельно.
+Рассчитываем для каждого потока два числа -- число запросов к Я и число запросов к Г.
+Далее урезаем поток -- если в каком-то потоке окажется больше 100 000 запросов, его нужно равномерно (случайно) проредить до 100000.
+Формат выгрузки потока:
+&lt;код региона&gt;;&lt;yandex или google&gt;;&lt;id пользователя&gt;;&lt;текст запроса в UTF-8 с символом &quot;;&quot; замененным на пробел&gt;
+Код региона получаем из IP стандартным модулем.
+Название файла: flow_&lt;код группы&gt;_all_20110701_31days.txt
+
+на выходе ожидается таблица вида:
+
+#|
+|| название группы | всего запросов к Я | всего запросов к Г ||
+|| U_All | ... | ... ||
+|| U_SN_vk | ... | ... ||
+|| U_SN_mm | ... | ... ||
+|| U_SN_ok | ... | ... ||
+|| U_SN_dr | ... | ... ||
+|#
+
+и 5 файлов:
+flow_U_All_all_20110701_31days.txt
+flow_U_SN_vk_all_20110701_31days.txt
+flow_U_SN_mm_all_20110701_31days.txt
+flow_U_SN_ok_all_20110701_31days.txt
+flow_U_SN_dr_all_20110701_31days.txt
+
+
+Публикация, в силу вида отчёта, не требуется
+</note-content>
+</text><last-change-date>2011-09-12T13:04:40.071068Z</last-change-date><last-metadata-change-date>2011-09-12T13:04:40.071068Z</last-metadata-change-date><create-date>2011-09-12T06:50:57.747188Z</create-date><cursor-position>1329</cursor-position><width>450</width><height>360</height><x>1416</x><y>159</y><open-on-startup>False</open-on-startup></note>
+

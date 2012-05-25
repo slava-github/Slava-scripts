@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Git</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Git
+Репозиторий <link:url>ssh://git@git-repo.stat.yandex.net/mrjob</link:url>
+
+
+Настройка
+git config --global user.email <link:url>slava@yandex-team.ru</link:url>
+git config --global user.name &quot;Vyacheslav Nechepurenko&quot;
+
+git pull - получить последние изменения
+git push - отправить свои изменения
+git checkout - откат не закомиченных изменений.
+
+git checkout &lt;id commit | HEAD~number&gt; file - получить файл из конкретного коммита.
+
+git reset --soft HEAD^ - переходим к работе над уже совершенным коммитом, сохраняя все состояние проекта и проиндексированные файлы
+
+git diff --name-status origin/master HEAD - показать изменения которые закомичены но еще не запушены  
+
+git log --no-merges --name-status master --not --remotes=*/master - показывает все коммиты которые сделаны но не запушены
+
+<link:url>http://www.calculate-linux.ru/main/ru/git</link:url>
+<link:url>http://githowto.com/</link:url>
+
+
+Добавление нового пользователя:
+Репозитарий: <link:url>ssh://git@git-repo.stat.yandex.net/gitosis-admin</link:url>
+<list><list-item dir="ltr">Добавляем публичный ключ в директорию keydir с именем пользователя
+</list-item><list-item dir="ltr">Пользователя прописываем в gitosis.conf</list-item></list>
+
+
+
+Как удалить файл из определенного комита
+git checkout fcbed10fb85bab25f3fd9b919116a5b319f61930
+git rm statadhoc-2953/1239/test
+git -commit --amend -v
+а потом git-rebase --onto HEAD fcbed10fb85bab25f3fd9b919116a5b319f61930 master</note-content>
+</text><last-change-date>2012-05-22T11:05:58.262563Z</last-change-date><last-metadata-change-date>2012-05-22T11:05:58.262563Z</last-metadata-change-date><create-date>2011-08-17T10:03:06.940371Z</create-date><cursor-position>746</cursor-position><width>450</width><height>360</height><x>31</x><y>357</y><tags><tag>system:notebook:Работа</tag></tags><open-on-startup>False</open-on-startup></note>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Синхронизация списков счетчиков</title><text xml:space="preserve"><note-content xmlns="http://beatniksoftware.com/tomboy" xmlns:link="http://beatniksoftware.com/tomboy/link" version="0.1">Синхронизация списков счетчиков
+
+В sqlplus зайти на сервер parserdb.yandex.ru и выполнить команды:
+
+drop table temp_standard_redir;
+
+copy from <link:url>statbox@betabox.yandex.ru</link:url> create temp_standard_redir (projectid, clickid, title, comm, flag, archived, calculate_pages, calculate_referers) using select projectid, clickid, title, comm, flag, archived, calculate_pages, calculate_referers from standard_redir;
+
+merge into standard_redir t1 using temp_standard_redir t2 on (t1.projectid=t2.projectid and t1.clickid=t2.clickid) when not matched then insert (projectid, clickid, title, comm, flag, archived, calculate_pages, calculate_referers) values (t2.projectid, t2.clickid, t2.title, t2.comm, t2.flag, t2.archived, t2.calculate_pages, t2.calculate_referers);
+
+drop table temp_standard_redir;</note-content>
+</text><last-change-date>2010-04-16T10:41:59.874693Z</last-change-date><last-metadata-change-date>2010-08-17T13:47:02.585428Z</last-metadata-change-date><create-date>2010-04-16T10:06:10.054286Z</create-date><cursor-position>403</cursor-position><width>450</width><height>360</height><x>1868</x><y>610</y><tags><tag>system:notebook:Работа</tag></tags><open-on-startup>False</open-on-startup></note>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Морда tr</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Морда tr
+75984 - записей в логе для домена <link:url>www.yandex.com.tr</link:url>
+74696 - status=200
+67483 - страница = / или /all
+57460 - -внутренние подсети
+
+
+
+cat yandex.tr |grep status=200|grep -E 'request=/(\?|        |all)'|perl -w ip.pl |wc -l</note-content>
+</text><last-change-date>2011-09-23T11:46:01.107329Z</last-change-date><last-metadata-change-date>2011-09-23T11:46:01.107329Z</last-metadata-change-date><create-date>2011-09-23T11:40:52.833246Z</create-date><cursor-position>110</cursor-position><width>450</width><height>360</height><x>87</x><y>291</y><open-on-startup>False</open-on-startup></note>
+

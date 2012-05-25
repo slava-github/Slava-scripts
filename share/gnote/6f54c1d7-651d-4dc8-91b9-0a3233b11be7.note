@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Переключение окружения</title><text xml:space="preserve"><note-content version="0.1">Переключение окружения
+STATBOX_ENVIRONMENT_SPEC=
+
+use Statbox::Environment; Statbox::Environment::Default()-&gt;environment(...)</note-content>
+</text><last-change-date>2010-11-12T11:16:26.725400Z</last-change-date><last-metadata-change-date>2010-11-12T11:16:26.725400Z</last-metadata-change-date><create-date>2010-04-29T11:21:21.724022Z</create-date><cursor-position>48</cursor-position><width>501</width><height>123</height><x>535</x><y>623</y><tags><tag>system:notebook:Работа</tag></tags><open-on-startup>False</open-on-startup></note>
+

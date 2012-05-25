@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>STATADHOC-1028</title><text xml:space="preserve"><note-content version="0.1">STATADHOC-1028
+1. Считаем только по лоам бара.
+2. определение типа сайта:
+<link:url>statbox@brasero/Berkanavt/yaca/output/current/cat/flt/yacatalog.flt</link:url> - рубрики каталога и хосты
+или
+
+filter.trie
+Зайцев игорь
+
+3. Сайты соц. сетей использовать как маски. *.host
+</note-content>
+</text><last-change-date>2011-03-30T14:55:50.691810Z</last-change-date><last-metadata-change-date>2011-03-30T14:55:50.691810Z</last-metadata-change-date><create-date>2011-03-30T14:31:22.836338Z</create-date><cursor-position>74</cursor-position><width>450</width><height>360</height><x>0</x><y>384</y><open-on-startup>False</open-on-startup></note>
+

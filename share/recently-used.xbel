@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///work/Download/result.tar" added="2012-05-02T06:35:07Z" modified="2012-05-02T06:35:07Z" visited="2012-05-02T06:35:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2012-05-02T06:35:07Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/3332_results.zip" added="2012-05-02T06:36:05Z" modified="2012-05-02T06:36:05Z" visited="2012-05-02T06:36:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2012-05-02T06:36:05Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/progit.ru.pdf" added="2012-05-02T12:02:32Z" modified="2012-05-02T12:02:32Z" visited="2012-05-02T12:02:32Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2012-05-02T12:02:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/powertop-2.0.tar.bz2" added="2012-05-12T11:43:34Z" modified="2012-05-12T11:43:35Z" visited="2012-05-12T11:43:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-bzip-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2012-05-12T11:43:35Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/%D0%97%D0%B0%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D0%BE%D1%82%D0%BF%D1%83%D1%81%D0%BA_(%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2_%D0%9D%D0%B5%D1%87%D0%B5%D0%BF%D1%83%D1%80%D0%B5%D0%BD%D0%BA%D0%BE).pdf" added="2012-05-14T14:29:34Z" modified="2012-05-23T06:34:08Z" visited="2012-05-14T14:29:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2012-05-23T06:34:08Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/%D0%97%D0%B0%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D0%BE%D1%82%D0%BF%D1%83%D1%81%D0%BA_(%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2_%D0%9D%D0%B5%D1%87%D0%B5%D0%BF%D1%83%D1%80%D0%B5%D0%BD%D0%BA%D0%BE)%20(1).pdf" added="2012-05-14T14:29:44Z" modified="2012-05-14T14:29:44Z" visited="2012-05-14T14:29:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2012-05-14T14:29:44Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/slava/Learning%20the%20Vi%20and%20Vim%20Editors~tqw~_darksiderg.pdf" added="2012-05-16T08:12:06Z" modified="2012-05-16T08:12:06Z" visited="2012-05-16T08:12:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2012-05-16T08:12:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/slava/Documents/Books/Python.djvu" added="2012-05-16T08:13:02Z" modified="2012-05-16T08:13:02Z" visited="2012-05-16T08:13:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/vnd.djvu"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2012-05-16T08:13:02Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/scripts.tar" added="2012-05-16T10:11:23Z" modified="2012-05-16T10:11:23Z" visited="2012-05-16T10:11:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2012-05-16T10:11:23Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/eav_32bit_5.0.95.5_ru.zip" added="2012-05-16T19:19:13Z" modified="2012-05-17T05:54:03Z" visited="2012-05-16T19:19:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2012-05-17T05:54:03Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/eav_64bit_5.0.95.5_ru.zip" added="2012-05-16T19:20:38Z" modified="2012-05-16T19:20:38Z" visited="2012-05-16T19:20:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2012-05-16T19:20:38Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///work/Download/WinDLG_v1_24_Release_Notes.pdf" added="2012-05-24T05:39:08Z" modified="2012-05-24T05:39:08Z" visited="2012-05-24T05:39:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2012-05-24T05:39:08Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

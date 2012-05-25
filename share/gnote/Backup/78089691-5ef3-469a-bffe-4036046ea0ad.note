@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Описание</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Описание
+
+4. выбираем дни где вероятность показателя &gt;=70%, и выбираем тот показатель который превалирует в течении недели, т.е. если было несколько дней где посетитель является мужчиной с вероятностью &gt;=70% и этих дней больше чем дней где он является женщиной с вероятностью &gt;=70%, то в эту неделю этот посетитель мужчина.
+
+для расчета п.4 или 6-ого показателя делаем сделдующее:
+Для каждого yandexuid по логам crypta-profiles-log за расчетный период, анализ производим для каждого типа демографии в отдельности,  например пол: для определенного посетителя смотрим в какие дни он был в вероятностью &gt;=70% мужчиной или женщиной, все остальные дни в расчет не берем, может оказаться, что для данного типа демографии мы вообще этого человека не учитываем, считаем что в этот день, этот человек был только одного пола не 100%, далее выбирает тот пол которого больше за расчетный период.</note-content>
+</text><last-change-date>2011-11-28T08:37:18.805449Z</last-change-date><last-metadata-change-date>2011-11-28T08:37:18.805449Z</last-metadata-change-date><create-date>2011-11-28T08:19:34.901548Z</create-date><cursor-position>883</cursor-position><width>450</width><height>360</height><x>521</x><y>446</y><open-on-startup>False</open-on-startup></note>
+

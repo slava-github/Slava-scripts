@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>statadhoc-754</title><text xml:space="preserve"><note-content version="0.1">statadhoc-754
+
+1. уникальных пользователей страницы 
+	<link:url>http://maps.yandex.ru/business</link:url> и <link:url>http://map.yandex.ru/business</link:url>
+
+2. Переходы с /business на <link:url>http://maps.yandex.ru/promo/pages/org/</link:url> и исключить из них &amp;ban или &amp;tips
+?? А не проще взять просто тех у кого Российские IP, или это для дополнительной защиты
+3. кол-во уникалов которые были в п.2 из были на <link:url>http://maps.yandex.ru/pages/feedback/feedback.xml</link:url> или
+<link:url>http://webmaster.yandex.ru/</link:url>
+
+??Перешли или были???
+?? Если пользователь сначала был <link:url>http://maps.yandex.ru/feedback/org/add/</link:url> или <link:url>http://webmaster.yandex.ru/</link:url>, а потом только засветился в п.2 их считать здесь.??
+
+4. кол-во уникалов которые были в п.2 и были на счетчике 70663</note-content>
+</text><last-change-date>2010-12-29T17:29:20.477319Z</last-change-date><last-metadata-change-date>2010-12-29T17:29:20.477319Z</last-metadata-change-date><create-date>2010-12-27T14:43:56.808403Z</create-date><cursor-position>675</cursor-position><width>450</width><height>360</height><x>526</x><y>196</y><open-on-startup>False</open-on-startup></note>
+

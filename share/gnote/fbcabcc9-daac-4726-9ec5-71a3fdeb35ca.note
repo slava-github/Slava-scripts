@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Настройка Gigolo</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Настройка Gigolo
+
+sudo gpasswd -a slava fuse
+
+Прописать в  <link:url>~/.local/share/applications/defaults.list</link:url>
+
+
+x-directory/gnome-default-handler=Thunar.desktop
+inode/directory=Thunar.desktop
+x-directory/normal=Thunar.desktop</note-content>
+</text><last-change-date>2012-04-10T13:11:56.218183Z</last-change-date><last-metadata-change-date>2012-04-10T13:11:56.218183Z</last-metadata-change-date><create-date>2012-04-10T13:03:20.896157Z</create-date><cursor-position>103</cursor-position><width>450</width><height>360</height><x>613</x><y>322</y><open-on-startup>False</open-on-startup></note>
+

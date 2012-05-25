@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>**Как считать**</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">**Как считать**
+Логи: watch-log.6p (выборки)
+Период расчета: 06.04.2011 - текущий момент
+Детализация: по дням
+
+1. Оставляем только данные у которых есть слово Chrome в <link:broken>UserAgent</link:broken>
+2. Оставляем только те данные в которых есть yandexuid и время его создания укладывается в следующие промежутки, заодно классифицируем этот хит (все даты указанны __включительно__):
+  27.04.2011 - 17.05.2011 = p1
+  07.06.2011 - 27.06.2011 = p2
+  02.08.2011 - 22.08.2011 = p3
+3.  Выкидываем хиты у которых counter_id имеет одно из значений в приложенных файлах
+4. Дальше используя ((<link:url>http://wiki.yandex-team.ru/Statbox/adhoc/<link:broken>OpisanieSlovarejjIAlgoritmov</link:broken></link:url><link:url>#slovarpoiskipoversiimetriki</link:url> методику метрики))
+применяем ее к полю referer и оставляем только переходы с поисковиков (нас интересуют все варианты поиска, т.е. верхний уровень в дереве метрики). Заодно классифицируем хиты:
+Яндекса  = Y
+Google = G
+Bing = B
+Поиск@mail.ru = М
+А также все остальные: Rambler, QIP.ru, Webalta, Nigma, Conduit.com, Gigabase, Yahoo, ICQ.com = O
+
+5. Определяем версию хрома с помощью регулярки взятой от ((<link:url>https://svn.yandex.ru/websvn/wsvn/conv/trunk/metrica/src/db_dumps/Metrica/<link:broken>UserAgent</link:broken></link:url><link:url>.sql</link:url> Метрики)) ((?:^|[^a-zA-z0-9/])Chrome[/ ](\\d+(?:\\.[\\dA-Za-z]{1,2})?)?)
+и классифицуем хиты:
+    13.0.782 и выше (&quot;b1&quot;),
+    12.0.742 и выше, но не выше 13.0.782 (&quot;b2&quot;),
+    11.0.696 и выше, но не выше 12.0.742 (&quot;b3&quot;),
+    ниже 11.0.696 (&quot;b4&quot;).
+
+Далее надо сгруппировать данные по дата + составной ключ ({поисковик}-{период выставления куки}-{версия браузера})
+//пример: Y-p1-b2//
+и для каждой группы посчитать кол-во хитов
+
+В результате надо получить Excel таблицу по вертикали Дни по горизонтали группы
+прим:
+</note-content>
+</text><last-change-date>2011-09-01T14:30:49.198132Z</last-change-date><last-metadata-change-date>2011-09-01T14:30:49.198132Z</last-metadata-change-date><create-date>2011-09-01T14:09:56.460675Z</create-date><cursor-position>0</cursor-position><width>450</width><height>360</height><x>1484</x><y>251</y><open-on-startup>False</open-on-startup></note>
+

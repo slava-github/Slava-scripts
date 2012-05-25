@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=/home/slava/.local/bin/view-img %f
+Name=view-img
+Comment=Custom definition for view-img
+NoDisplay=true

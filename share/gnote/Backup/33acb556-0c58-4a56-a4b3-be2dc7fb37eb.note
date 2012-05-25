@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Регуляризация отчетов</title><text xml:space="preserve"><note-content version="0.1">Регуляризация отчетов
+STATADHOC-795 (akuts)
+<list><list-item dir="ltr">Имя конечной таблицы $user/$job/$date[0]
+</list-item><list-item dir="ltr">Что делаем с IPREG.detailed и ip_blacklist
+</list-item><list-item dir="ltr">Для данных используем переменную date
+</list-item><list-item dir="ltr">Расчет должен выдавать данные, только за указанный период
+</list-item><list-item dir="ltr">Все промежуточные таблицы должны создаваться автоматом.
+</list-item><list-item dir="ltr">Конечный результат должен быть в определенном формате</list-item></list>
+STATADHOC-726 (akuts)
+<list><list-item dir="ltr">Оформить в MrProc
+</list-item><list-item dir="ltr">Вопрос про словарь UrlToGroups
+</list-item><list-item dir="ltr">Использование словаря geobase.pm
+</list-item><list-item dir="ltr">UrlToGroups.yaml
+</list-item><list-item dir="ltr">ip_blacklist</list-item></list>
+STATADHOC-884 (akuts)
+<list><list-item dir="ltr">Оформить в MrProc
+</list-item><list-item dir="ltr">Убрать -jobcount 400 -threadcount 8
+</list-item><list-item dir="ltr">Таблицы в tmp что бы сами автоматом удалялись
+</list-item><list-item dir="ltr">Надо решить что-то в файлом dict (как я понял это словарь из базы)?
+</list-item><list-item dir="ltr">Изменить имя где хранить результат и имя результата</list-item></list>
+STATADHOC-881 (kaathewise)
+<list><list-item dir="ltr">Вроде сделано</list-item></list>
+STATADHOC-661
+Ниже подзадачи:
+  STATADHOC-698 (alexkuk):
+<list><list-item dir="ltr">Оформить на MrProc</list-item></list>
+  STATADHOC-699 (alexkuk):
+<list><list-item dir="ltr">Оформить на MrProc</list-item></list>
+
+
+
+
+
+
+</note-content>
+</text><last-change-date>2011-02-17T13:21:39.846243Z</last-change-date><last-metadata-change-date>2011-02-17T13:21:39.846243Z</last-metadata-change-date><create-date>2011-02-17T08:19:26.006888Z</create-date><cursor-position>910</cursor-position><width>450</width><height>360</height><x>565</x><y>386</y><open-on-startup>False</open-on-startup></note>
+

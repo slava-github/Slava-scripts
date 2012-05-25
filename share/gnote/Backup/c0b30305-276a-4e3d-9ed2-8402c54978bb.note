@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>statadhoc-2659</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">statadhoc-2659
+
+**Как считать**
+
+Лог: access_log
+Период: 2011-10-01 - 2011-11-31
+Детализация: месяц
+1. из access_log оставляем все хиты vhost находится в зонах ru, ua, kz для которых определился хотя бы один проект или аналогично задачи STATADHOC-2199 этот хит был на API карт с lang=TR-*
+и хит был из Турции, так же применяем все стандартные фильтры
+2. группируем данные по посетителям, выкидываем всех которые небыли на Турецком API
+3. Для каждого проекта и для всех суммарно считаем кол-во уникальных посетителей, и кол-во уточненных уникальных посетителей.
+4. Берем хиты на Турецких картах и объеденяем их с вышеописанной группой по дата+ip + useragent
+5. Для тех кто нашелся считаем пункт 3</note-content>
+</text><last-change-date>2011-12-06T10:19:11.220641Z</last-change-date><last-metadata-change-date>2011-12-06T10:19:11.220641Z</last-metadata-change-date><create-date>2011-12-06T09:35:39.552817Z</create-date><cursor-position>0</cursor-position><width>450</width><height>360</height><x>67</x><y>611</y><open-on-startup>False</open-on-startup></note>
+

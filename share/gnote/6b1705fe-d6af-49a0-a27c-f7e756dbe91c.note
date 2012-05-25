@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy"><title>Python</title><text xml:space="preserve"><note-content version="0.1" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size">Python
+
+Узнать о философии python - <italic>import this</italic>
+
+<bold><size:large>Типы данных:</size:large></bold>
+Вид представления данных:
+repr - вид программного кода
+str - человекочитаемый вид
+dir - список всех методов и отрибутов
+help - получение информации о чем либо
+
+Полезные модули <italic>math, random</italic>
+
+<bold><italic>Последовательность</italic></bold> - операции:
+  <italic>len</italic> - длинна последовательности
+  <italic>[]</italic> - выбор элемента 0 первый элемент -1 последний.
+  [:] - slicing срез от и до не включая. один из элементов может быть не задан
+  + - конкатинация (объединение)
+  *- размножение 
+<bold><italic>Строки</italic></bold> - это тип <italic>последовательность</italic> содержащая символы. 
+  &quot;&quot;&quot; - начало и конец многостроной строки
+  <italic>строку нельзя изменить</italic>, <italic>т.е. s[0] = 'a' нельзя</italic>
+ list(s1) - Разобъет строку на список из символов ''.join(L) объединит обратно.
+  <italic>s.find</italic>(s1) - найти s1 в s
+  <italic>s.replace(s1, s2)</italic> - найти в  s все s1 и заменить на s2, <underline>формирует новую строку а старая остается неизменной.</underline>
+  <italic>s.split(s1)</italic> - разбивает строку
+  <italic>s.rstrip()</italic> ... - удаляет справа пробельные символы в том числе и перенос строки.
+
+<underline>Полезные модули</underline> 
+  <italic>re</italic> - поиск по шаблону.
+  <italic>pickle</italic> - модуль сохранения и чтения питон структур в файл.
+  <italic>struct</italic> - модуль сохранения объектов питона в двоичном виде
+
+<bold>Список</bold> (list) - это изменяемая последовательность (массив) любых объектов, но нельзя даже при присваивании выходить за границу существующего массива
+<italic>инициализация</italic> []
+<bold>Кортедж</bold> (tuple) - неизменяемый список.
+  инициализируется K = (1,2,3);
+<bold>Множества</bold> (set) - неизменяемая не упорядоченная последовательность уникальных элементов
+  <italic>инициализация</italic> - set('abs') или set(['a', 'b', 's'])
+возможны различные арифметические и логические операции
+<bold>Словарь</bold> (dict) - это хеш
+D = {'key': 'val', ...}
+<italic>D['key']</italic> - доступ 
+<italic>'f' in D</italic> - проверка на существование ключа
+<italic>D.keys()</italic> - в 3.0 возвращает итератор 
+<italic>list(D)</italic> - получить список ключей или list(D.keys()) 
+<italic>sorted(D)</italic> - получить отсортированный список ключей 
+<bold>Файл</bold> - объект работы с файлом
+инициализация open(&lt;name&gt;, &lt;mode&gt;,&lt;режим буферизации&gt;). Этот объект итерируемый по умолчанию по строкам поэтому для чтения можно использовать конструкцию: for line in open('file'):
+
+можно составлять <bold>цепочки условий</bold>
+A&gt;B&gt;C тоже что и A&gt;B and B&gt;C
+
+<bold>print</bold> <italic>(&lt;object, ....&gt;[, sep=' '] [, end='\n'] [, file=sys.stdout])</italic> - выводит объекты в stdout или указанный файл, производит преобразование объекта с помощью метода str.
+
+<bold>if</bold> &lt;условие&gt;: elif &lt;условие&gt; else: - условный оператор
+<bold>A = Y if X else Z</bold> - однострочник условного присваивания работает с 2.5
+<bold>or and not</bold> - логические операторы и только так.
+
+<bold>break</bold> - выход из цикла
+<bold>continue</bold> - перейти к следующему кругу цикла
+<bold>pass</bold>- пустая инструкция
+
+<bold>while</bold> <italic>&lt;условие&gt;: &lt;действия&gt; <bold>else: </bold></italic><italic>&lt;действия 2&gt;</italic> - цикл &lt;действия 2&gt; выполняются если из цикла вышли не через break.
+<bold>for</bold> <italic>&lt;переменная&gt; <bold>in</bold></italic><italic> &lt;object&gt;: &lt;действия&gt; <bold>else:</bold></italic><italic> &lt;действия 2&gt;</italic> - итерация по всем элементам &lt;object&gt;
+
+<bold><underline>Работа с итераторами</underline></bold>
+<bold>next</bold>(&lt;object&gt;) - вызывает метод __next__ или next у объекта
+<bold>iter</bold>(&lt;object&gt;) - возвращает объект итератор для &lt;object&gt;. Необходим, что бы можно было делать несколько итерация для одного и того же объекта.
+
+<bold>xrange</bold>, <bold>range</bold><italic>([&lt;начало&gt;], &lt;конец&gt;, [&lt;шаг&gt;])</italic> - итератор возвращающий диапазон от &lt;начало&gt; или 0, до &lt;конец&gt; не включая его с шагом &lt;шаг&gt; целых чисел.
+<bold>map</bold><italic>(&lt;функция&gt;, &lt;объект&gt;)</italic> - выполняет &lt;функцию&gt; над всеми элементами &lt;объект&gt;
+<bold>sorted</bold>
+<bold>zip</bold><italic>(&lt;object&gt;, ...)</italic> - обходит параллельно все итерируемые объекты, пока в первом из них не закончатся элементы, возвращает кортедж значений.
+<bold>filter</bold>
+<bold>enumerate</bold>
+<bold>sum
+max
+min
+any
+all</bold>
+
+<italic>[&lt;method(x)&gt; for x in &lt;iobject&gt; if &lt;условие&gt;]</italic> - генератор списка из &lt;iobject&gt;
+{k: <italic>&lt;method(x)&gt; for (k, x) in &lt;iobject&gt; if &lt;условие&gt;</italic>} - генератор словаря из &lt;iobject&gt;
+
+
+<bold><size:large>Функции</size:large></bold>
+
+<bold>def</bold> name(a. b=1. *c): 
+  <bold>return</bold> a+b+c[0]
+Функция начинает существовать только после того как до нее дойдет интерпретатор.
+В функцию все аргументы передаются как указатели
+<bold>globla</bold> x, y - описание глобальных переменных
+<bold>nonlocal</bold> x - разрешение использовать переменную которая должна быть инициализирована уровнем выше. если переменная не инициализирована, то происходит исключение.
+<bold>yield</bold>
+<bold>lambda</bold> x: x**2;
+
+<bold>__builtin__</bold> или <bold>builtnis</bold> - модуль встроиных имен</note-content>
+</text><last-change-date>2012-02-10T03:23:36.543193Z</last-change-date><last-metadata-change-date>2012-02-10T03:23:36.543193Z</last-metadata-change-date><create-date>2012-01-10T20:08:18.114464Z</create-date><cursor-position>2838</cursor-position><width>450</width><height>563</height><x>1458</x><y>199</y><open-on-startup>False</open-on-startup></note>
+
