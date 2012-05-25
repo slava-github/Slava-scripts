@@ -83,7 +83,8 @@ sub create_file {
 	my $file_name = shift;
 	my $cmd;
 	if (-f '/usr/bin/convert') {
-		$cmd = "convert '$file_name' -auto-orient -resize 1280x1280 ".FileList::GetPath()."/wallpaper.jpg";
+		my $file = FileList::GetPath()."/wallpaper.jpg";
+		$cmd = "rm $file;convert '$file_name' -auto-orient -resize 1280x1280 ".$file;
 	} else {
 		$cmd = "ln -sf '$file_name' ".FileList::GetPath()."/wallpaper.jpg";
 	}
