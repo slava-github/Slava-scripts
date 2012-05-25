@@ -1,0 +1,43 @@
+#!/bin/bash
+. ~/.bash_profile
+
+if [ $1 = 'stop' ]; then
+	wmount umount
+	echo 'status offline' |simctrl >/dev/null
+	rm /tmp/sleep_off
+	
+	echo `date;xmms-shell -e cur` >> ~/.xmms/pl_pos.log
+	xmms -n 0 -q
+	
+	powersave -u
+	sleep 5;
+	i810switch crt off	
+fi
+
+if [ $1 = 'start' ]; then
+	i810switch crt on
+	xautolock -enable
+	touch /tmp/sleep_off
+	
+	amixer -q set "Headphone Jack Mode" "Headphone out"
+	amixer -q set "Headphone" "90%,90%" unmute
+	amixer -q set "PCM" "60%,60%"	unmute
+	amixer -q set "Internal Speaker" mute
+
+	brightness 5
+	
+	(mount -l | grep -q 'on /work') || (echo 'Mount /work' && sudo mount /work)
+	
+	ln -f ~/.xmms/work/* ~/.xmms/
+	(nohup xmms -i 0 2>&1 >/dev/null) &
+
+#	until ( ping -c 1 statdev-64.yandex.ru ) ;do sleep 1;done;
+#	wmount mount
+#	sleep 1
+#	mount|grep statdev
+	
+	echo 'status online' |simctrl >/dev/null
+	wmctrl -s 1
+	stat-mon
+	#~ xfce4-panel -c
+fi

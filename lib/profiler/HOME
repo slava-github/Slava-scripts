@@ -1,0 +1,22 @@
+#!/bin/bash
+. ~/.bash_profile
+
+if [ $1 = 'stop' ]; then
+	echo `date;xmms-shell -e cur` >> ~/.xmms/pl_pos.log
+	xmms -n 0 -q
+	sleep 1
+fi
+
+if [ $1 = 'start' ]; then
+	amixer set "Headphone Jack Mode" "Line out"
+	amixer set "Headphone" "90%,90%" unmute
+	amixer set "PCM" "45%,45%" unmute
+
+	brightness 3
+
+	xautolock -disable
+	(mount -l | grep -q 'on /work') || (echo 'Mount /work' && sudo mount /work)
+	
+	ln -f ~/.xmms/home/* ~/.xmms/
+	(nohup xmms -i 0 2>&1 >/dev/null) &
+fi

@@ -1,0 +1,9 @@
+LOG=/home/slava/.local/log/xinit.log
+date >>$LOG
+#for i in xfsettingsd xfce4-settings-helper xfdesktop;do
+#	echo -n "$i " >>$LOG
+#	pidof $i >>$LOG
+#done;
+#sleep 10;
+setxkbmap -option terminate:ctrl_alt_bksp >>$LOG 2>&1
+echo >>$LOG
