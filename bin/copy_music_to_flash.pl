@@ -37,14 +37,16 @@ exit;
 sub init {
 	(my $conf_name = shift) or return;
 
-	if (lc($conf_name) eq 'wito' || uc($conf_name) eq 'PDA') {
-		$RESULT_PATH = '/media/disk/Mus_RND';
-		$MAX_FILE_NUMBER = 50;
-		$MAX_DIR_NUMBER = 8;
-		$ADD_BASE_NAME = 1;
-	} elsif (lc($conf_name) eq 'cd') {
+	if (lc($conf_name) eq 'cd') {
 		$SOURCE_PATH = '/work/Music/Song/';
 		$RESULT_PATH = '/media/DISK/Mus_RND';
+		$MAX_FILE_NUMBER = 80;
+		$MAX_DIR_NUMBER = 4;
+		$ADD_BASE_NAME = 1;
+		$MAX_SIZE = 1400*1024;
+	} elsif (lc($conf_name) eq 'light') {
+		$SOURCE_PATH = '/work/Music/Types/Light/';
+		$RESULT_PATH = '/media/DATA/Music';
 		$MAX_FILE_NUMBER = 80;
 		$MAX_DIR_NUMBER = 4;
 		$ADD_BASE_NAME = 1;
@@ -198,7 +200,7 @@ sub to_translit {
 sub find_files {
 	my ($path) = @_;
 	my %result; 
-	Common::echo(my $cmd = "find $path -type f -name '*.mp3' -or -name '*.MP3' -or -name '*.ogg'");
+	Common::echo(my $cmd = "find -L $path -type f -name '*.mp3' -or -name '*.MP3' -or -name '*.ogg'");
 	open(FL, "$cmd|") or die 'Can\'t start finde mp3 files';
 	while (<FL>) {
 		chomp;
